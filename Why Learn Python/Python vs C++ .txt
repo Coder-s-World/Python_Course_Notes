@@ -1,0 +1,14 @@
+                                 Python                                  |                             C++
+1. Python emphasizes readability and simplicity                          |     1. C++ focus on performance and low level control.
+2. Python is dynamically typed.                                          |     2. C++ is statically typed.
+3. Python has automatic memory maagement (garbage collection).           |     3. C++ need manual memory management.
+4. Python is interpreted language.                                       |     4. C++ is compiled language.
+5. Python has extensive libraries and framework for various tasks,       |     5. C++ has more limited libraries but powerful standard libraries.
+   it highly effective for development.                                  | 
+6. Python code is short and easier to write.                             |     6. c++ is little bit harder to write than Python.
+7. Python is widely used in data analytics, web development and          |     7. C++ is commonly used in system programming, game development and  
+   scripting.                                                            |       performace - critical application.
+8. Python's dynamic nature allow for faster prototyping and easier       |     8. C++ offers stronger type checking and can catch errors at compile time.  
+   debugging                                                             |
+9. Python is begineer friendly and has a shallower learning curve        |     9. C++ is considered more complex and demanding master.  
+   compared to C++                                                       |       
