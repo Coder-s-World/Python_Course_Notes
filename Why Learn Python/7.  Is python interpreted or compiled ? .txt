@@ -1,1 +1,7 @@
+----------  Python is interpreted or compiled language ?  ------------------
 
+-> Python is interpreted language this is the statement which is mentioned by most of the developer, but this is not fully correct statement beacuse python program is 
+   firstly compiled and then interpreted. 
+-> Compilation part is not visible to programmer it is hidden from programmer, this is the reason why programmers believe in "Python is interpretd language".
+-> Compilation first convert code into byte code and internally convert by PVM (Python Virtual Machine) according to the underlying platfrom (machine + operating 
+   system).
