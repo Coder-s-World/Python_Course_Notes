@@ -14,8 +14,8 @@ Operator  	Name
 *	          Multiplication	
 /	          Division	       --   decimal quotient
 %        	 Modulus	          --   remainder
-**	          Exponentiation	 --  product
-//	          Floor division	 --  integer quotient
+**	          Exponentiation	 --   product
+//	          Floor division	 --   integer quotient
 
 2) Assignment Operator
 
