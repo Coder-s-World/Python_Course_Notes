@@ -6,14 +6,35 @@ Expression
 
 Operators
 
-1) Arithmetic operators
+1) Arithmetic Operators
 
 Operator  	Name	 
-+	          Addition	
++	          Addition	   
 -	          Subtraction	
 *	          Multiplication	
-/	          Division	
-%        	  Modulus	
-**	        Exponentiation	
-//	        Floor division	
+/	          Division	       --   decimal quotient
+%        	 Modulus	          --   remainder
+**	          Exponentiation	 --  product
+//	          Floor division	 --  integer quotient
 
+2) Assignment Operator
+
+Operator
+Operator	   Example	      Same As	
+=	         x = 5	         x = 5	
++=	         x += 3	      x = x + 3	
+-=	         x -= 3	      x = x - 3	
+*=	         x *= 3	      x = x * 3	
+/=	         x /= 3	      x = x / 3	
+%=	         x %= 3	      x = x % 3	
+//=	      x //= 3	      x = x // 3	
+**=	      x **= 3	      x = x ** 3	
+&=	x        &= 3	         x = x & 3	
+|=	x        |= 3	         x = x | 3	
+^=	x        ^= 3	         x = x ^ 3	
+>>=	      x >>= 3	      x = x >> 3	
+<<=	      x <<= 3	      x = x << 3	
+:=	         print(x := 3)	x = 3
+                           print(x)
+
+3) Comparison Operator
