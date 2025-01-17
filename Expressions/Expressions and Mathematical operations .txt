@@ -50,7 +50,7 @@ Operator            Name
 
 4) Python Logical Operator
 
-Operator  _          Description
+Operator            Description
 
 and         ---      Returns True if both condition are True
 or          ---      Returns True if any of two condition are True
@@ -65,8 +65,8 @@ not in     ---      Returns True if specified is value is not present in sequenc
 
 6) Bitwise Operator
 
-Operator            Name                             Description
-&        ---        AND                              Sets each bit to 1 if both bits are 1
+Operator              Name                             Description
+&        ---          AND                              Sets each bit to 1 if both bits are 1
 |	      ---        OR	                             Sets each bit to 1 if one of two bits is 1		
 ^	      ---        XOR	                             Sets each bit to 1 if only one of two bits is 1	
 ~	      ---        NOT	                             Inverts all the bits	
