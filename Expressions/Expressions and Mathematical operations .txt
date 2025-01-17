@@ -8,12 +8,12 @@ Operators
 
 1) Arithmetic Operators
 
-Operator  	Name	 
+Operator  	 Name	 
 +	          Addition	   
 -	          Subtraction	
 *	          Multiplication	
-/	          Division	       --   decimal quotient
-%        	 Modulus	          --   remainder
+/	          Division	         --   decimal quotient
+%        	  Modulus	         --   remainder
 **	          Exponentiation	 --   product
 //	          Floor division	 --   integer quotient
 
