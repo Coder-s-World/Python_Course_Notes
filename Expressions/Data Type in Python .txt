@@ -1,0 +1,41 @@
+#  Numeric
+=> Any representation of data which has numeric value. Python
+   identifies three types of numbers – integer, float and complex
+   number.
+
+1) Integer
+=> Positive and negative whole numbers. Examples: 1234, -234, 0x46 (hexadecimal number), 0O123
+   (octal number))
+   In C and related programming languages such as Python, a hexadecimal number is prefixed with 0x and an octal number is prefixed with 0O. 
+   Float Real numbers with a floating point representation in which the fractional component is denoted by a decimal or scientific notation
+   Examples: -55.550, 0.005, 1.32E10 (scientific notation))
+
+2) Complex number
+=> A number with a real and imaginary component is represented as a + bj inPython where a and b are floats and j = √-1
+   Examples: 4+6j, -2.3+6.4j
+   Note: The common mathematical representation of a complex number uses a +bj i with i being the imaginary part. But in
+   electronics j is used because i already represent current and the next letter after i is j. 
+
+# Boolean 
+=> Any representation of data which has two values denoted by True and False. 
+
+# Sequence 
+=>  An ordered collection of similar or different data types. The built-in Sequence data types in Python are – String, List and Tuple. 
+
+1) String 
+=>  A collection of one or more characters put in single, double or
+    triple quotes. Examples: ‘Hello’, "Hello", "'Hello'", """Hello""". 
+
+2) List 
+=> An ordered collection of one or more data items, not necessarily of same type, put in square brackets.
+   Examples: [1,"Ravi",75.50, True]
+
+3) Tuple 
+=> An ordered collection of one or more data items, not necessarily of same type put in parentheses. The contents of a tuple cannot be 
+   modified – it is immutable - after the tuple is created. 
+   Examples: (1,"Ravi", 75.50, True)
+   Note: Refer to the Helper Text to learn more about mutability. 
+
+# Dictionary 
+=> An unordered collection of data in key:value pair form. Collection of such pairs is enclosed in curly brackets.
+   Example: {1:"Superman", 2:"Wonder Woman", 3:"Thor", 4: "Hulk", 5:"Black Widow
