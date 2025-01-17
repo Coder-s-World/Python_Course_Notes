@@ -1,0 +1,19 @@
+Expression 
+
+=> Expression means which contains value (2,2, etc) as well as operator (+,-, etc) which reduced down to as single
+   value ex. 2 + 2 = (4 = single value).
+=> A single value with no operator is also considered as expression because it evaluate to itself.
+
+Operators
+
+1) Arithmetic operators
+
+Operator  	Name	 
++	          Addition	
+-	          Subtraction	
+*	          Multiplication	
+/	          Division	
+%        	  Modulus	
+**	        Exponentiation	
+//	        Floor division	
+
