@@ -1,1 +1,25 @@
+What is Variable ?
 
+-> variables are the name which is used to store the value in computer memory.
+-> Variable act as a container with a lable. It is not actual memory address but it is the name of value where it is stored.
+-> values are assigned using = to variables.
+-> Variable are case sensitive.
+-> same variable name after declaring after that line will overwrite to variable which is called 'Overwriting of Variable'. 
+
+    e.g.
+    name = mona
+    name= sona
+    print(name)
+    
+    output
+    sona
+
+
+Rules to declare variable 
+
+ 1. Don't initialize with numbers
+ 2. Hyphen and spaces are not allowed
+ 3. Special characters are not allowed in Variables
+ 4. Number, letter and underscrore are only valid in variable name
+ 5. Must begin with only underscrore or letters
+ 6. Variables cannot be a keyword
