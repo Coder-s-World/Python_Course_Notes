@@ -1,0 +1,3 @@
+Python is high level programming language. 
+It is considered one of the easiest language. 
+Python is developed and released in 1991 by Guido Van Rossum. 
