@@ -35,3 +35,5 @@
     print(string_num)  # Output: "123"
     print(type(string_num)) #Output: <class 'str'>
 
+6. float()
+ -> The float() function converts the specified value into a floating point number.
