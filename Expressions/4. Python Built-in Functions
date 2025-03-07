@@ -1,1 +1,37 @@
+# Built-in Function
+
+1. print()
+ -> print is function which is used to print the statement on the screen.
+ -> use can mention the values to print between the parentheses.
+ -> we can use this  function to put a blank line on screen. just use this = print()
+ -> E.x - print("my name is xyx ") 
+
+2. input()
+ -> Input function is use to take input from user.
+ -> by default input function take input as a string.
+ -> the syntax is input()
+ -> E.x -  name = input(" enter your name : ") # this input will be store in name variable.
+
+3. len()
+ -> Len function is used to count the number of characters present on string.
+ -> Counting start from 1 only
+ -> it also count the spaces available within string.
+ -> E.x. - print(len("my name is xyz") # it also include space within string.
+
+4. int()
+ -> int() is used to convert the type of values into interger form.
+ -> as we all know input() takes by default string value to convert that into interger use int()
+ -> E.x. name = int(input("enter any number : "))
+ -> name = "200"
+ -> int(name)
+ -> if the passed value does not evaluate as integer value , python will display error.
+
+5. string()
+ -> The str() function in Python converts a given value into a string representation.
+ -> It's a built-in function that accepts various data types as input, including integers, floats, booleans, and other objects.
+ -> The primary purpose of str() is to ensure that different data types can be seamlessly combined or manipulated with strings
+ -> num = 123
+    string_num = str(num)
+    print(string_num)  # Output: "123"
+    print(type(string_num)) #Output: <class 'str'>
 
