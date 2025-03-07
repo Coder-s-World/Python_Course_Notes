@@ -1,0 +1,83 @@
+In real life programs cannot execute line by line certen time we have to skip some lines of the code to execute and sometime we have to repeat some line of code.
+Flow control in Python dictates the order in which code is executed.
+
+oval shape - start amd end 
+rectangel - state
+triangle - condition / decision 
+
+boolean values 
+True
+False
+always first letter capital
+use in flow control
+can be stored in variable
+
+boolean operator
+and
+or
+not
+python evaluate not first, and , and then or at last like in math presecen
+it is called as boolean operators beacuse it always operates on boolean vales only
+
+and 
+F F F
+F T F
+T F T
+T T T
+
+Or
+F F F 
+F T T 
+T F T
+T T T
+
+not
+F T
+T F
+
+# element of flow control
+
+  flow conrol statement often start with a part called the condition, 
+  and all are followed bya block of code called clause.
+
+  block of code
+  lines of python code can be grouped together in blocks. you an tel when a block begins 
+  and ends by looking at the indentation of the lines of code.
+  indentation is the spaces which tell while writing code replacement of curly braces of other languages.
+    1. block begin when indentation incrreases
+    2. block can contain other blocks
+    3. blocks end when the indentation decreases to zero or to a containing block indentation.
+
+# if statement
+
+  The most common type of flow control statement is the if statement. which is used to check condition.
+  An if statement's clause will execute if the statement's condition is True. 
+  The clause is skipped if the condition is False. 
+  
+  In Python, an if statement consists of the following:
+  
+  1. The if keyword to check condition
+  2. A condition (that is, an expression that evaluates to True or False)
+  3. A colon(:)
+  4. Starting on the next line, an indented block of code (called the if clause)
+
+# else statement
+
+  An if clause can optionally be followed by an else statement.
+  The else clause is executed only when the if statement's condition is False.
+
+  1. The else keyword
+  2. A colon(:)
+  3. Starting on the next line, an indented block of code (called the else clause)
+
+#elif statement
+
+  While only one of the if or else clauses will execute, you may have a case where you want one of many possible clauses to execute.2
+  The elif statement is an "else if" statement that always follows an if or another elif statement.
+  
+  1. The elif keyword
+  2. A condition (that is, an expression that evaluates to True or False)
+  3. A colon(:)
+  4. Starting on the next line, an indented block of code (called the elif clause).
+
+  
