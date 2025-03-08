@@ -1,1 +1,50 @@
+# For loop
 
+For loop execute block of code for certain number of times.
+A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, 
+a set, or a string).
+
+# range() is used within for loop. 
+
+range(start,stop,step)
+In Python, range() is a built-in function that generates a sequence of numbers
+
+start = starting value
+stop = stopping value
+step = how many steps needed to loop
+
+-> range works only with integer
+-> by default value of initialize range() is 0 .
+-> The range() function in Python generates a sequence of numbers. 
+-> It is commonly used within loops to iterate a specific number of times. 
+-> The function can accept one, two, or three arguments: 
+-> it is immutable
+-> in stop value always display like stop value- 1. ex if stop value is 4 then output be like 0 1 2 3
+
+If you just pass one argument then loop will consider it as the stop value.
+If you just pass two argument then loop will consider it as the start and stop value.
+
+for var in iterable:
+    # statements
+
+Difference b/w loops 
+
+Iteration Basis:
+  for: Iterates over a sequence.
+  while: Iterates based on a condition.
+
+Iteration Count:
+  for: Often used when the number of iterations is known.
+  while: Often used when the number of iterations is unknown.
+
+Iteration Management:
+  for: Iteration is automatically managed.
+  while: Requires manual condition updates.
+
+Typical Use:
+  for: Processing collections (lists, etc.).
+  while: Repeating code until a condition changes.
+
+Infinite Loop Risk:
+  for: Lower risk.
+  while: Higher risk if the condition isn't properly managed.
