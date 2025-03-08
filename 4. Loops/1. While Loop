@@ -1,1 +1,20 @@
+While loop
+
+Whenever we want execute block of code again and again it is called as loop.
+The code of block will execute repeatedly until the given condition is true.
+
+1. while
+2. condition
+3. colon
+4. starting on next line
+
+syntax : 
+
+while condition:
+   block of code
+
+it looks similar to the if statement but there is difference of how they behave.
+in if statement at the end of block execution will continue after block of code while in while loop
+the execution will jump back to the starting line of while statement.
+
 
