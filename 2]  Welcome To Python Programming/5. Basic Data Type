@@ -1,4 +1,4 @@
-A Data Type is an attribute associated with a piece of data that tells a computer system how to interpret its value.
+A Data Type is an attribute associated with a piece of data that tells a computer system how to interpret its value. Data types helps the compiler to understand the different types of data on which the programmer will be working.
 
                                           DATA TYPES IN PYTHON
                                                   |
@@ -39,6 +39,8 @@ Complex numbers are written with a "j" as the imaginary part:
 x = 3+5j
 y = 5j
 z = -5j
+Python represents complex numbers as a built-in numeric type using the format a + bj, where a is the real part, b is the imaginary part, and j (or J) denotes the imaginary unit 
+A number representing the real part of the complex number. Default 0. The real number can also be a String, like this '3+5j', when this is the case, the second parameter should be omitted.
 
 Dictionary → A data type that stores data in key-value pairs.
 
@@ -46,14 +48,9 @@ Boolean → A data type that stores only True or False values.
 
 Set → A data type that stores unique and unordered values.
 
-String
-A string is a sequence of characters used to store text data such as names, sentences, or symbols.
+String -> A string is a sequence of characters used to store text data such as names, sentences, or symbols.
 
-List
-A list is a sequence used to store multiple items in a single variable.
+List -> A list is a sequence used to store multiple items in a single variable.
 
-Tuple
-A tuple is a sequence used to store multiple items like a list, but its values cannot be changed.
+Tuple -> A tuple is a sequence used to store multiple items like a list, but its values cannot be changed.
 
-Python represents complex numbers as a built-in numeric type using the format a + bj, where a is the real part, b is the imaginary part, and j (or J) denotes the imaginary unit 
- A number representing the real part of the complex number. Default 0. The real number can also be a String, like this '3+5j', when this is the case, the second parameter should be omitted.
