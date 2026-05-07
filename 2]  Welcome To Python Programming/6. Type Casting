@@ -1,0 +1,13 @@
+Typecasting in Python
+
+Typecasting is the process of changing a variable from one data type to another. Imagine you have a number stored as text (a string), but you want to do math with it. You need to "cast" it into a number type like an integer or float so Python can understand and calculate with it. 
+
+Python offers two ways to do this: implicit and explicit typecasting.
+
+=> Implicit typecasting happens automatically when Python converts compatible types behind the scenes, like turning an integer into a float when needed.
+=> Explicit typecasting is when you tell Python exactly what type you want by using functions like int(), float(), or str(). For example, if a user enters their age as "25" (a string), you can convert it to an integer with int("25") to perform calculations.
+
+num_str = "5"
+num_int = int(num_str)  # Converts string "5" to integer 5
+result = num_int + 3    # Now you can add
+print(result)           # Output: 8
