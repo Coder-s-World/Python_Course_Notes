@@ -1,0 +1,28 @@
+We have many implementations of python programming in different languages. Some are :
+
+  1.  CPython
+  2.  Jython
+  3.  PyPy
+  4.  IronPython
+  5.  Stackless Python
+  6.  MicroPython
+
+Different implementations mean different versions of Python made for different purposes and platforms.
+
+Implementation	  |  Easy Explanation
+
+CPython       	  |  The official and most common version of Python written in C language.
+Jython	          |  Python version that runs on Java platform (JVM).
+PyPy	            |  Faster version of Python that improves execution speed.
+IronPython	      |  Python version made for the .NET framework.
+Stackless Python	|  Python designed for better multitasking and handling many tasks together.
+MicroPython	      |  Small and lightweight Python used in microcontrollers and embedded devices.
+
+In Short :-
+
+CPython → Normal Python
+Jython → Python + Java
+PyPy → Fast Python
+IronPython → Python + .NET
+Stackless Python → Better multitasking Python
+MicroPython → Python for small devices and hardware
