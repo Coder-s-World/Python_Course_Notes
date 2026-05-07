@@ -1,1 +1,77 @@
 
+1. Arithmetic Operators in Python
+Arithmetic operators are used to performing mathematical operations like addition, subtraction, multiplication, division, etc. Arithmetic operators can be set in between operands. In mathematical operations elements on which operation is supposed to be done are called operand and the type of operation is performed by the operator used between two operands.
+
+Operator	Meaning
++	        Addition
+-	        Subtraction
+*	        Multiplication
+/	        Division
+%	        Modulus (remainder)
+**	      Exponent (power)
+//	      Floor Division
+
+2. Comparison Operators
+A comparison operator is used to comparing two or more variables or constants having some values. We can compare different variables or constants in six different ways that include, comparing if two values are equal, or if two values are not equal, and many other ways.
+
+Used to compare values.
+
+Operator	Meaning
+==	      Equal to
+!=	      Not equal to
+>	        Greater than
+<	        Less than
+>=	      Greater than or equal to
+<=	      Less than or equal to
+
+3. Assignment Operators
+The assignment operator is used to assigning values to the variable in many different ways, we can assign values by incrementing, decrementing, or by performing any other operation and then assigning the value to the variable. We have 13 assignment operators to assign values to the variable. 
+
+Used to assign values.
+
+Operator	Meaning
+=	        Assign value
++=	      Add and assign
+-=	      Subtract and assign
+*=	      Multiply and assign
+/=	      Divide and assign
+
+4. Logical Operators
+The logical operator is used to perform some logical operations or combine conditional statements. Mainly logical operators are used in control statements like if, else, and elif where we can check more conditions together just by using these operators. Logical operators always return TRUE or FALSE values.
+
+Used for logical conditions.
+
+Operator	Meaning
+and	      True if both conditions are true
+or	      True if one condition is true
+not	      Reverses the condition
+
+5. Bitwise Operators
+These operators are used to compare the binary numbers. We can perform different operations on binary numbers such as and, or, xor, not, left shift, and right shift. Sometimes these operators are also called bitwise-or, bitwise-and, and bitwise-xor and so on. Shift operators are used to shifting the values of the binary number to left or right.
+Used to perform bit-level operations.
+
+Operator	Meaning
+&	        AND
+|	        OR
+^	        XOR
+~	        NOT
+<<	      Left Shift
+>>	      Right Shift
+
+6. Membership Operators
+Membership operatorsin python  are used for checking if the iterator or the given value is present in the sequence or not. These types of operators always return values in a TRUE or FALSE format. If the value is found in the sequence then the operator will return TRUE else the operator will return FALSE.
+
+Used to check membership.
+
+Operator	Meaning
+in	      Returns TRUE if the iterator is present in sequence
+not in	  Returns TRUE if the iterator is not present in sequence
+
+7. Identity Operators
+Identity operators are used in Python programing language to check if the two values, variables, or constants are not only the same but also have the same memory location. These types of operators are used to compare and check the exact match of the values between two objects.
+
+Used to compare object identity.
+
+Operator	Meaning
+is	      Returns TRUE if a and b both are same
+is not	  Return TRUE if a and b both are not same
