@@ -1,1 +1,19 @@
+---Python----
+Python has simple and easy syntax.	                   
+Python is an interpreted language.	
+Python is slower in execution speed.	
+Python is mainly used in AI, Data Science, Automation, and scripting.	
+Python uses dynamic typing (no need to declare variable type).	
+Python code is shorter and requires fewer lines.
+Python is popular in agile and DevOps because it is simple, flexible, and helps developers work faster.
+Python supports multiple Inheritance.
 
+----Java----
+Java has more complex and lengthy syntax.
+Java is a compiled language (bytecode + JVM).
+Java is faster than Python.
+Java is mainly used in enterprise applications, Android apps, and large systems.
+Java uses static typing (variable type must be declared).
+Java code is longer and more structured.
+Java provides better support for refactoring (improving code without changing output) because Java has a strict type system and powerful IDE tools that make code changes safer and easier.
+Java partially supports Multiple Inheritance through interfaces.
