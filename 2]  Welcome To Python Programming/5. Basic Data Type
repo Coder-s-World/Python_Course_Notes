@@ -1,1 +1,59 @@
+A Data Type is an attribute associated with a piece of data that tells a computer system how to interpret its value.
 
+                                          DATA TYPES IN PYTHON
+                                                  |
+                     _______    ___________   ____|____   ____    ________                
+                     NUMERIC     DICTIONARY    BOOLEAN    SET    SEQUENCE
+                        |                                           |
+      __________________|________________                   ________|____________________________
+     |                  |                |                  |                  |                |
+ INTEGER              FLOAT         COMPLEX NUMBER       STRING             LIST            TUPLE
+
+Python Numbers
+
+There are three numeric types in Python:
+•	int
+•	float
+•	complex
+
+Int
+Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+x = 1
+y = 35656222554887711
+z = -3255522
+
+Float
+Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+Example
+x = 1.10
+y = 1.0
+z = -35.59
+Float can also be scientific numbers with an "e" to indicate the power of 10.
+x = 35e3
+y = 12E4
+z = -87.7e100
+
+
+Complex
+Complex numbers are written with a "j" as the imaginary part:
+x = 3+5j
+y = 5j
+z = -5j
+
+Dictionary → A data type that stores data in key-value pairs.
+
+Boolean → A data type that stores only True or False values.
+
+Set → A data type that stores unique and unordered values.
+
+String
+A string is a sequence of characters used to store text data such as names, sentences, or symbols.
+
+List
+A list is a sequence used to store multiple items in a single variable.
+
+Tuple
+A tuple is a sequence used to store multiple items like a list, but its values cannot be changed.
+
+Python represents complex numbers as a built-in numeric type using the format a + bj, where a is the real part, b is the imaginary part, and j (or J) denotes the imaginary unit 
+ A number representing the real part of the complex number. Default 0. The real number can also be a String, like this '3+5j', when this is the case, the second parameter should be omitted.
