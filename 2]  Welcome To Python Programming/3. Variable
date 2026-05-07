@@ -1,0 +1,19 @@
+----variable----
+Variables are an essential part of programming and they are used to store all different types of data. It iscornerstone of programming, this is because they allow you to work with and manipulate data. In Python, variables are used as a container and when we assign a value, a variable is created.
+
+Eg, x = 15
+
+There are different options available to you as a developer when it comes to naming your variables. 
+
+camelCase. 
+The first letter of the first word is lowercase, and the first letter of every word after that is uppercase with no spaces between words. For example, if I have a variable called my name, I'll put the M of my in lowercase and the N of name in uppercase with the rest of the letters in lowercase and no space between the words
+
+snake_case. 
+When using snake_case, you keep everything in lowercase letters, but you use an underscore between words. If I want to make the variable my name, my_name would be the result of this approach. Although you have different options as a developer, it's a good idea to be consistent when you are creating variables across your programs.
+
+There are some rules of Python variable:
+
+Variable names must begin with either an underscore (_) or a letter (a-z, A-Z).
+The remaining characters in the variable name can be letters, numbers (0–9), and underscores.
+MyVar and myvar are different variables because variable names are case-sensitive.
+Some reserved keywords in Python (including if, while, and for) cannot be used as variable names.
