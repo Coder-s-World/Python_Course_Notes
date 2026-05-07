@@ -1,1 +1,69 @@
+Definition
+Python is an Open source, Free, High-level, Dynamic, and Interpreted programming language. Python was released in 1991 by Guido van Rossum. Python programing language is one of the cleanest and easy to learn a language in the programming world. It’s easy syntax improved the readability of the code and makes it easy to understand.
+
+Features Of Python
+
+1. Easy to Learn and Read
+Python has simple and clear syntax, so beginners can learn it quickly.
+Its code looks almost like normal English, which makes it easy to understand.
+
+2. Free and Open Source
+Python is completely free to use.
+Anyone can download it, use it, and even improve it because its source code is publicly available.
+
+3. Object-Oriented Language
+Python supports Object-Oriented Programming (OOP).
+This helps programmers organize code using classes and objects, making large projects easier to manage.
+
+4. Portable Language
+Python programs can run on different operating systems like Windows, Linux, and Mac with very few changes.
+This means the same code can work on many computers.
+
+5. Large Library Support
+Python provides many built-in libraries and tools.
+These libraries help in web development, data science, AI, games, automation, and many other tasks without writing everything from scratch.
+
+6. Interpreted Language
+Python executes code line by line using an interpreter.
+This makes debugging easier because errors can be found quickly during execution.
+
+
+------Advantages of Python ------
+1. Easy to learn
+2. Simple and readable syntax
+3. Less coding required
+4. Large libraries available
+5. Works on multiple platforms
+6. Fast development
+
+----Disadvantages of Python-----
+1. Slower execution speed
+2. Uses more memory
+3. Not ideal for mobile apps
+4. Runtime errors possible
+5. Weak for high-performance tasks
+6. Less suitable for game development
+
+---Steps to Install Python on Windows---
+1. Open the official website:
+2. Python Downloads
+3. Click Download Python.
+4. Run the downloaded .exe file.
+5. ✔️ Tick “Add Python to PATH”.
+6. Click Install Now.
+7. Wait for installation to finish.
+8. Click Close.
+     Verify installation:
+     Open Command Prompt
+
+Type:
+python --version
+If version appears, Python is installed successfully.
+
+The process to generate the output:
+>> Write a high-level python code.
+>> Save the code in py file.
+>> Interprete the code.
+>> It will generate a bytecode file.
+>> The output will get printed on the screen
 
