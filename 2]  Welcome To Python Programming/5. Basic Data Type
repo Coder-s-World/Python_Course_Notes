@@ -42,15 +42,21 @@ z = -5j
 Python represents complex numbers as a built-in numeric type using the format a + bj, where a is the real part, b is the imaginary part, and j (or J) denotes the imaginary unit 
 A number representing the real part of the complex number. Default 0. The real number can also be a String, like this '3+5j', when this is the case, the second parameter should be omitted.
 
-Dictionary → A data type that stores data in key-value pairs. dict1 = {key:value}
+Dictionary → An unordered collection of data in key:value pair form. Collection of such pairs is enclosed in curly brackets.
+                Example: {1:"Superman", 2:"Wonder Woman", 3:"Thor", 4: "Hulk", 5:"Black Widow
 
-Boolean → A data type that stores only True or False values. a = true
+
+Boolean → Any representation of data which has two values denoted by True and False. 
 
 Set → A data type that stores unique and unordered values. ser1 {elements}
 
-String -> A string is a sequence of characters used to store text data such as names, sentences, or symbols.
+String -> A string is a sequence of characters used to store text data such as names, sentences, or symbols. A collection of one or    more characters put in single, double or triple quotes. Examples: ‘Hello’, "Hello", "'Hello'", """Hello""". 
 
-List -> A list is a sequence used to store multiple items in a single variable.
+List -> A list is a sequence used to store multiple items in a single variable. An ordered collection of one or more data items, not necessarily of same type, put in square brackets. Examples: [1,"Ravi",75.50, True]
 
-Tuple -> A tuple is a sequence used to store multiple items like a list, but its values cannot be changed.
+Tuple -> A tuple is a sequence used to store multiple items like a list, but its values cannot be changed.  An ordered collection of one or more data items, not necessarily of same type put in parentheses. The contents of a tuple cannot be 
+   modified – it is immutable - after the tuple is created. 
+   Examples: (1,"Ravi", 75.50, True)
+   Note: Refer to the Helper Text to learn more about mutability. 
+
 
