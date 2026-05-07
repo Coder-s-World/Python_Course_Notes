@@ -1,1 +1,21 @@
+---- Comment ----
+Comments are used to explain the code and are ignored by Python during execution.
 
+Single-line comments
+Placing am # symbol in front of the text you want to be a comment causes Python to ignore everything from that point until the end of the current line.
+        # Single Line comment
+
+Multi-Line CommentsPython does not have a dedicated syntax for multi-line comments (like /* ... */ in other languages). Developers typically handle this in two ways
+
+        1 : Multiple Hashtags: The official recommended practice (per PEP 8) is to place a # at the start of each line.python# This is a              multi-line comment
+                # that spans across
+                # several lines.
+        
+        2 : Triple Quotes: You can use triple double quotes (""") or single quotes ('''). While technically string literals, Python                   ignores them if they are not assigned to a variable.
+                """ This is also used as a
+                    multi-line comment.
+                """
+
+Inline/code comments
+The # symbol will cause Python to ignore everything from that point until the end of the current line, so inline comments can be created in this way.
+x = 1 # assigns value of 1 to x
