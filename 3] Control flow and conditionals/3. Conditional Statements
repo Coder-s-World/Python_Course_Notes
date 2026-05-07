@@ -1,1 +1,27 @@
 
+Conditional statements in Python are like decision-making tools that help your program choose what to do based on certain conditions. Imagine you're at a restaurant deciding what to order based on your budget. If you have more than $20, you might order a full meal; if less, maybe just a snack. Similarly, in Python, conditional statements let your program check if something is true or false and then act accordingly.
+
+There are three main types of conditional statements:
+
+1. if statement: This checks if a condition is true. If it is, the program runs the code inside the if block. For example:
+
+if bill_total > 100:
+    print("Bill is greater than 100")
+
+This means, "If the bill is more than 100, print this message."
+
+2. else statement: This catches everything that the if statement didn't catch. It's like saying, "If the previous condition wasn't true, do this instead." For example:
+
+else:
+    print("Bill is less than or equal to 100")
+
+
+3. elif statement (short for "else if"): This lets you check multiple conditions one after another. It's like asking, "If the first condition isn't true, how about this one?" For example:
+
+if bill_total > 200:
+    print("Bill is greater than 200")
+elif bill_total > 100:
+    print("Bill is greater than 100 but less than or equal to 200")
+else:
+    print("Bill is 100 or less")
+
