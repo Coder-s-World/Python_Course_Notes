@@ -1,0 +1,63 @@
+
+Keywords and Identifiers in Python
+Keywords and Identifies are two fundamental aspects of python programming language that make it incredibly coder friendly, which will help you understand why you should learn it.
+
+Keywords in Python :
+A Python keyword is a special reserved word that has specific meaning and purpose, and can only be used in the context of its specific meaning and purpose.Python currently has 35 keywords in the latest versions of Python.
+
+All Keywords in Python are in lower case but some keywords like True, False etc are in uppercase. So, We can say that Python can have keywords as lowercase, uppercase as well as Capitalized.
+
+35 Keywords in Python
+
+
+False
+None
+True
+and
+as
+assert
+async
+await
+break
+case
+class
+continue
+def
+del
+elif
+else
+except
+finally
+for
+from
+global
+if
+import
+in
+is
+lambda
+match
+nonlocal
+not
+or
+pass
+raise
+return
+try
+while
+with
+yield
+
+Identifiers in Python: 
+An identifier is a name assigned to an entity, such as a variable, class, function, etc. By identifying entities in code, it is easier to understand their flow and differentiate them from each other.
+
+There are some rules for identifiers in python:
+
+All identifiers must begin with a letter (a-z, A-Z) or an underscore (_).
+The rest of the identifier can contain letters, digits (0-9), and underscores.
+Identifiers are case-sensitive, meaning myVar and myvar are treated as different identifiers.
+In order to make your code more readable, you should name your identifiers descriptively and meaningfully.
+In Python, An Identifier can have a maximum length of 79 characters.
+Valid identifier: abc123
+
+Invalid identifier: 123ab
