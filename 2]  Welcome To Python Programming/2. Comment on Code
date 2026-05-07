@@ -7,11 +7,11 @@ Placing am # symbol in front of the text you want to be a comment causes Python 
 
 Multi-Line CommentsPython does not have a dedicated syntax for multi-line comments (like /* ... */ in other languages). Developers typically handle this in two ways
 
-        1 : Multiple Hashtags: The official recommended practice (per PEP 8) is to place a # at the start of each line.python# This is a              multi-line comment
+1 : Multiple Hashtags: The official recommended practice (per PEP 8) is to place a # at the start of each line.python# This is a  multi-line comment
                 # that spans across
                 # several lines.
         
-        2 : Triple Quotes: You can use triple double quotes (""") or single quotes ('''). While technically string literals, Python                   ignores them if they are not assigned to a variable.
+2 : Triple Quotes: You can use triple double quotes (""") or single quotes ('''). While technically string literals, Python ignores them if they are not assigned to a variable.
                 """ This is also used as a
                     multi-line comment.
                 """
