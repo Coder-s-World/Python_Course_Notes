@@ -1,0 +1,88 @@
+Nested Loop
+Python programming language allows to use one loop inside another loop which is called nested loop. Following example illustrates the concept.
+In Python, you can nest loops inside other loops to create more complex iterations. Nested loops involve one loop inside another, and the inner loop is executed for each iteration of the outer loop. This is commonly used for tasks like working with matrices, tables, or multi-dimensional data.
+
+Syntax : 
+For/while (Outer Loop):
+For/while( Inner Loop) :
+For/while ( Outer Loop) :
+if and else ( Inner Loop)
+
+Working :
+The outer loop iterates through the range from 0 to n/len(sequence) and for each item in that sequence.
+It enters the inner loop where it iterates over a range of that item.
+For each iteration of that item, it perform the given operation.
+It only leaves the inner loop when it has completely iterated through a range of that item.
+When it leaves the inner loop, it goes back to the outer loop and the process continues until it has completely iterated over its sequence.
+
+#nested Loop
+#for-for nested Loop 
+
+----------------Example 1 :-
+for i in range(1,3):
+    for j in range(1,6): #print the multiplication of 1 and 2 
+        print(i*j,end=' ')
+    print(' ')
+#for-while nested loop
+j=1
+for i in range(1,3):
+    j=1
+    while(j<6):
+        print(i*j, end =' ')
+        j=j+1
+    print(' ')
+#while-while nested loop 
+i=1
+while(i<3):
+    j=1
+    while(j<6):
+        print(i*j,end=' ')
+        j=j+1
+    print(' ')
+    i+=1
+#while-If nested Loop 
+i=1
+j=1
+while(i<3):
+    if(j<6):
+        print(i*j, end =' ')
+        j=j+1
+    else:
+        j=1
+        i+=1
+        print('')
+
+Output:
+1 2 3 4 5
+2 4 6 8 10
+1 2 3 4 5
+2 4 6 8 10
+1 2 3 4 5
+2 4 6 8 10
+1 2 3 4 5
+2 4 6 8 10
+
+
+--------------Example 2 :-
+from __future__ import print_function
+for i in range(1, 5):
+    for j in range(i):
+        print(i, end=' ')
+    print()
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+
+
+
+
+
+
+
+
+
+
+
+
