@@ -1,0 +1,12 @@
+| Feature               | `for` Loop                                  | `while` Loop                                  | Nested Loop                                                |
+| --------------------- | ------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------- |
+| Definition            | Repeats code for a fixed sequence or range. | Repeats code while a condition is `True`.     | A loop inside another loop.                                |
+| Working               | Iterates through items one by one.          | Runs until the condition becomes `False`.     | Inner loop runs completely for every outer loop iteration. |
+| Best Used When        | Number of iterations is known.              | Number of iterations is unknown.              | Working with patterns, tables, matrices, etc.              |
+| Condition Check       | Automatically handled by Python.            | Programmer must write the condition manually. | Depends on outer and inner loop conditions.                |
+| Risk of Infinite Loop | Very low.                                   | High if condition is not updated properly.    | Possible if inner or outer loop is incorrect.              |
+| Syntax Style          | Simple and short.                           | Slightly longer due to condition update.      | More complex because multiple loops are used.              |
+| Iteration Control     | Uses sequence/range directly.               | Uses condition-based execution.               | Uses multiple levels of iteration.                         |
+| Common Example Use    | Printing numbers from 1 to 10.              | Running until user enters correct value.      | Printing star patterns or multiplication tables.           |
+| Readability           | Easier to read.                             | Moderate readability.                         | Harder to understand if deeply nested.                     |
+| Performance           | Usually efficient for fixed iterations.     | Efficient for condition-based tasks.          | Can become slower due to repeated inner executions.        |
