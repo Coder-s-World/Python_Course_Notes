@@ -1,22 +1,81 @@
 
 Conditional statements in Python are like decision-making tools that help your program choose what to do based on certain conditions. Imagine you're at a restaurant deciding what to order based on your budget. If you have more than $20, you might order a full meal; if less, maybe just a snack. Similarly, in Python, conditional statements let your program check if something is true or false and then act accordingly.
 
-There are three main types of conditional statements:
+If Statement
+If -Else statements
+Nested If statements
+If-Elif Ladder 
+Short- Hand if-else statement
+Short-Hand If statement
 
 1. if statement: This checks if a condition is true. If it is, the program runs the code inside the if block. For example:
+If-Statement :
+If statement is the simplest decision making statemet in Python programming. It is use to decide weather a particular statement is True or not.
+If the condition holds true , the statemet inside the’IF’ will execute else it will not. 
 
+Syntax :-
+if( Condition ) :
+    #statements
+
+Example : -
 if bill_total > 100:
     print("Bill is greater than 100")
 
 This means, "If the bill is more than 100, print this message."
 
-2. else statement: This catches everything that the if statement didn't catch. It's like saying, "If the previous condition wasn't true, do this instead." For example:
+2. else statement: This catches everything that the if statement didn't catch. It's like saying, "If the previous condition wasn't true, do this instead." 
+If-Else Statement : 
+If we want to do something  else when the condition inside ‘If’ is False , here we use if-else.
+If condition holds true , then program will execute the code under the if-condition.
+If condition is False , it will execute the code under else part. 
 
+Syntax : 
+  if( condition ):
+    #statements
+  else:
+      #statements
+
+example:
+if bill_total > 100:
+    print("Bill is greater than 100")
 else:
     print("Bill is less than or equal to 100")
 
 
-3. elif statement (short for "else if"): This lets you check multiple conditions one after another. It's like asking, "If the first condition isn't true, how about this one?" For example:
+3.Nested If : 
+Nested if statement means an If statement under another If statement  and Python allows us to do So.
+If we have to take some decisions on the basis of two or more condition  we can use nested-if statements.
+Synatx : 
+if ( condition1):
+     #statements
+     if(condition2):
+         #statements 
+     #block ends here
+#block ends here 
+
+#nested if statement
+me='Xyz'
+if(me):
+    print('Welcome to INDIA')
+    if(me=='Xyz'):
+        print('You are welcome to become a INDIAN.')
+ 
+
+4. elif statement (short for "else if"): This lets you check multiple conditions one after another. It's like asking, "If the first condition isn't true, how about this one?" 
+If-elif Ladder : 
+When we have multiple condition to check and excute according to the given condition , we can use if-elif-ladder.
+It’s upto us that we want to use a else portion in the code.
+It follows top-down approach.
+
+Syntax : 
+if(condition1):
+    #statements 
+elif(condition2): 
+    #statements 
+else:
+    #statements
+
+Example:
 
 if bill_total > 200:
     print("Bill is greater than 200")
@@ -25,3 +84,16 @@ elif bill_total > 100:
 else:
     print("Bill is 100 or less")
 
+5.Short Hand If statement :
+Whenever there is only one statement inside the If loop.
+The statement can be put on the same line as the if statement. 
+ 
+Syntax : 
+  if(condition): #statement
+
+6.Short Hand If -else statement :
+Whenever there is only one statement inside the both If-else loop.
+The statement can be put on the same line as the if -else statement.
+
+Syntax : 
+  #staement1 for True  if(condition) else  #statement2 for False.
