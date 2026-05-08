@@ -1,0 +1,91 @@
+While loop
+While loop is a entry controlled looping statement. While loop works on the condition given in the loop. It runs until the given condition is true , once the condition becomes false it exits from the loop. 
+
+while condition:
+    # code to execute
+
+---------------Example 1 :-
+count = 1
+while count <= 3:
+    print(f"Iteration number: {count}")
+    count += 1  # Increment the counter
+
+Output:
+Iteration number: 1
+Iteration number: 2
+Iteration number: 3
+
+--------------Example  2:-
+while loops are perfect for situations where you want to keep asking a user for something until they give the right answer.
+
+Python
+password = ""
+while password != "secret123":
+    password = input("Enter the password: ")
+
+print("Access Granted!")
+
+--------------Example 3:-
+You can use a while loop to empty a list one by one. This is useful when the order of removal matters.
+
+Python
+tasks = ["Email client", "Fix bug", "Update docs"]
+
+while tasks:  # While the list is NOT empty
+    current_task = tasks.pop(0)  # Remove the first item
+    print(f"Completed: {current_task}")
+print("All tasks finished!")
+
+Output:
+Completed: Email client
+Completed: Fix bug
+Completed: Update docs
+All tasks finished!
+
+--------------Example 4:-
+Sometimes you don't know the condition at the start. You set it to True and use a break statement to exit when a specific logic is met.
+
+Python
+import random
+
+while True:
+    num = random.randint(1, 10)
+    print(f"Rolled: {num}")
+    if num == 7:
+        print("Lucky 7 found! Stopping.")
+        break
+
+Output (Variable):
+Rolled: 3
+Rolled: 5
+Rolled: 7
+Lucky 7 found! Stopping
+
+To get the most out of while loops, it's helpful to see them in different scenarios: counting, processing data, and interacting with users.
+
+--------------Example 5:-
+You can use while loops to filter data by skipping specific iterations without stopping the whole loop.
+
+Python
+n = 0
+while n < 5:
+    n += 1
+    if n == 3:
+        continue  # Skips the print for number 3
+    print(f"Processing number: {n}")
+
+Output:
+Processing number: 1
+Processing number: 2
+Processing number: 4
+Processing number: 5
+
+-----------------Infinite While Loop
+To execute a block of code infinite number of times we can use the while loop.
+
+Code given below uses a 'while' loop with the condition "True", which means that the loop will run infinitely until we break out of it using "break" keyword or some other logic.
+
+while (True):
+    print("Hello Geek")
+Note: It is suggested not to use this type of loop as it is a never-ending infinite loop where the condition is always true and we have to forcefully terminate the program (or loop execution).
+
