@@ -72,3 +72,19 @@ The process to generate the output:
 >> It will generate a bytecode file.
 >> The output will get printed on the screen
 
+****** Versions of Python ******
+Type	                   | Total Versions
+________________________|_________________________________
+                        |
+Major Versions	         | 3 Major Versions
+Names	              | Python 0.x, Python 2.x, Python 3.x
+Current Active Version  | Python 3.x
+Discontinued Version    | Python 2.x
+
+Main Python Generations
+Generation  |	Example Versions
+Python 0.x  |	0.9.0
+Python 2.x  |	2.0 to 2.7
+Python 3.x  | 	3.0 to 3.13
+
+
