@@ -1,1 +1,109 @@
+For Loop
 
+In programming, a for loop is a control flow statement that allows you to execute a block of code repeatedly for each item in a sequence or collection, such as a list, tuple, or range. It automates the process of iterating over elements, making it efficient to perform repetitive tasks without manually writing the same code multiple times. The loop runs a predetermined number of times based on the size of the sequence. For loop is mostly used as iterator in Python.
+
+For loops are used for sequential traversal. If we want to iterate over natural numbers , we can make a list of the number or we can use Range keyword.
+
+Syntax :
+for iterator_variable in sequence:
+  #body of the loop 
+
+Example:
+for i in list/string:
+  body of the loop.
+
+
+----------Iterating Over List, Tuple, String and Dictionary Using for Loops in Python
+li = ["nashik", "mumbai", "pune"]
+for x in li:
+    print(x)
+    
+tup = ("nashik", "mumbai", "pune")
+for x in tup:
+    print(x)
+    
+s = "abc"
+for x in s:
+    print(x)
+    
+d = dict({'x':123, 'y':354})
+for x in d:
+    print("%s  %d" % (x, d[x]))
+    
+set1 = {10, 30, 20}
+for x in set1:
+    print(x),
+
+output 
+nashik
+mumbai
+pune
+nashik
+mumbai
+pune
+a
+b
+c
+x  123
+y  354
+10
+20
+30
+
+Iterating by Index of Sequences
+We can also use the index of elements in the sequence to iterate. The key idea is to first calculate the length of the list and then iterate over the sequence within the range of this length.
+
+li = ["nashik", "mumbai", "pune"]
+for index in range(len(li)):
+    print(li[index])
+
+output
+nashik
+mumbai
+pune
+Explanation: This code iterates through each element of the list using its index and prints each element one by one. The range(len(list)) generates indices from 0 to the length of the list minus 1
+
+data = {"id": 101, "status": "active"}
+keys = list(data.keys())
+
+for i in range(len(keys)):
+    key = keys[i]
+    print(f"Key Index {i}: {key} -> {data[key]}")
+
+Output:
+Key Index 0: id -> 101
+Key Index 1: status -> active
+
+names = ["Alice", "Bob"]
+for index, name in enumerate(names):
+    print(f"{index}: {name}")
+
+Output:
+0: Alice
+1: Bob
+
+Range Function in Python
+The function can take up to three arguments:
+range(start, stop, step)
+
+  start (Optional): The starting number (default is 0).
+  stop (Required): The number at which to stop (not included in the result).
+  step (Optional): The increment between numbers (default is 1).
+
+range function is mostly used in for loops to traverse the set of code for specified numbers of times.
+    1. Single Argument (Stop)
+    Starts at 0 and goes up to, but does not include, the number provided.
+    2. Two Arguments (Start, Stop)
+    Starts at the first number and stops before the second.
+    3. Three Arguments (Start, Stop, Step)
+    The third number determines how much to skip.
+    4. Negative Step (Counting Backwards)
+    You can use a negative step to count down, provided the start is higher than the stop.
+
+Important Note
+The range() function doesn't actually create a full "list" of numbers in memory; it creates a range object that generates numbers on the fly. This makes it extremely memory-efficient, especially for large numbers like range(1000000).
+
+If you want to see the numbers as a list, you have to convert it:
+
+print(list(range(5)))
+# Output: [0, 1, 2, 3, 4]
