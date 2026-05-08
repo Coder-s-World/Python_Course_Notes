@@ -2,76 +2,142 @@
 1. Arithmetic Operators in Python
 Arithmetic operators are used to performing mathematical operations like addition, subtraction, multiplication, division, etc. Arithmetic operators can be set in between operands. In mathematical operations elements on which operation is supposed to be done are called operand and the type of operation is performed by the operator used between two operands.
 
-Operator	Meaning
-+	        Addition
--	        Subtraction
-*	        Multiplication
-/	        Division
-%	        Modulus (remainder)
-**	      Exponent (power)
-//	      Floor Division
+| Operator | Meaning             | Example        |
+| -------- | ------------------- | -------------- |
+| `+`      | Addition            | `5 + 3 = 8`    |
+| `-`      | Subtraction         | `10 - 4 = 6`   |
+| `*`      | Multiplication      | `6 * 2 = 12`   |
+| `/`      | Division            | `10 / 2 = 5.0` |
+| `%`      | Modulus (Remainder) | `10 % 3 = 1`   |
+| `**`     | Exponent (Power)    | `2 ** 3 = 8`   |
+| `//`     | Floor Division      | `10 // 3 = 3`  |
+
 
 2. Comparison Operators
 A comparison operator is used to comparing two or more variables or constants having some values. We can compare different variables or constants in six different ways that include, comparing if two values are equal, or if two values are not equal, and many other ways.
 
 Used to compare values.
 
-Operator	Meaning
-==	      Equal to
-!=	      Not equal to
->	        Greater than
-<	        Less than
->=	      Greater than or equal to
-<=	      Less than or equal to
+| Operator | Meaning                  | Example            |
+| -------- | ------------------------ | ------------------ |
+| `==`     | Equal to                 | `5 == 5` → `True`  |
+| `!=`     | Not equal to             | `5 != 3` → `True`  |
+| `>`      | Greater than             | `10 > 7` → `True`  |
+| `<`      | Less than                | `4 < 9` → `True`   |
+| `>=`     | Greater than or equal to | `8 >= 8` → `True`  |
+| `<=`     | Less than or equal to    | `6 <= 10` → `True` |
+
 
 3. Assignment Operators
 The assignment operator is used to assigning values to the variable in many different ways, we can assign values by incrementing, decrementing, or by performing any other operation and then assigning the value to the variable. We have 13 assignment operators to assign values to the variable. 
 
 Used to assign values.
 
-Operator	Meaning
-=	        Assign value
-+=	      Add and assign
--=	      Subtract and assign
-*=	      Multiply and assign
-/=	      Divide and assign
+| Operator | Meaning             | Example                |
+| -------- | ------------------- | ---------------------- |
+| `=`      | Assign value        | `x = 10`               |
+| `+=`     | Add and assign      | `x += 5` → `x = x + 5` |
+| `-=`     | Subtract and assign | `x -= 3` → `x = x - 3` |
+| `*=`     | Multiply and assign | `x *= 2` → `x = x * 2` |
+| `/=`     | Divide and assign   | `x /= 4` → `x = x / 4` |
+
 
 4. Logical Operators
 The logical operator is used to perform some logical operations or combine conditional statements. Mainly logical operators are used in control statements like if, else, and elif where we can check more conditions together just by using these operators. Logical operators always return TRUE or FALSE values.
 
 Used for logical conditions.
 
-Operator	Meaning
-and	      True if both conditions are true
-or	      True if one condition is true
-not	      Reverses the condition
+| Operator | Meaning                          | Example                       |
+| -------- | -------------------------------- | ----------------------------- |
+| `and`    | True if both conditions are true | `(5 > 2 and 10 > 5)` → `True` |
+| `or`     | True if one condition is true    | `(5 > 10 or 8 > 3)` → `True`  |
+| `not`    | Reverses the condition           | `not(5 > 2)` → `False`        |
+
 
 5. Bitwise Operators
-These operators are used to compare the binary numbers. We can perform different operations on binary numbers such as and, or, xor, not, left shift, and right shift. Sometimes these operators are also called bitwise-or, bitwise-and, and bitwise-xor and so on. Shift operators are used to shifting the values of the binary number to left or right.
-Used to perform bit-level operations.
+These operators are used to compare the binary numbers. We can perform different operations on binary numbers such as and, or, xor, not, left shift, and right shift. Sometimes these operators are also called bitwise-or, bitwise-and, and bitwise-xor and so on. Shift operators are used to shifting the values of the binary number to left or right. Used to perform bit-level operations. Bitwise operators act on bits and perform bit-by-bit operations.
 
-Operator	Meaning
-&	        AND
-|	        OR
-^	        XOR
-~	        NOT
-<<	      Left Shift
->>	      Right Shift
+A bit means Binary Digit. It is the smallest unit of data in a computer.
+A bit can have only two values:
+0
+1
 
+These two values represent:
+OFF / ON
+FALSE / TRUE
+NO / YES
+Example
+
+Binary number:
+1010
+Here each digit (1 or 0) is called a bit.
+
+Full Forms
+bit → Binary Digit
+byte → Group of 8 bits
+
+Example:
+10101100 = 8 bits = 1 byte
+
+| Operator | Meaning     | Example                                                   |
+| -------- | ----------- | --------------------------------------------------------- |
+| `&`      | AND         | `5 & 3 = 1` *(101 & 011 = 001)*                           |
+| `\|`     | OR          | `5 \| 3 = 7` *(101 | 011 = 111)*                          |
+| `^`      | XOR         | `5 ^ 3 = 6` *(101 ^ 011 = 110 → different bits become 1)* |
+| `~`      | NOT         | `~5 = -6` *(reverses all bits of 5)*                      |
+| `<<`     | Left Shift  | `5 << 1 = 10` *(101 → 1010, shifts bits left by 1 place)* |
+| `>>`     | Right Shift | `5 >> 1 = 2` *(101 → 10, shifts bits right by 1 place)*   |
+
+Steps to Solve Bitwise Operators
+A.Convert decimal numbers into binary.
+EXAMPLE = 10 
+| Step | Division by 2 | Quotient | Remainder |          Read remainders from bottom to top:
+| ---- | ------------- | -------- | --------- |          1010
+| 1    | 10 ÷ 2        | 5        | 0         |
+| 2    | 5 ÷ 2         | 2        | 1         |          So, 10 = 1010                                                           
+| 3    | 2 ÷ 2         | 1        | 0         |
+| 4    | 1 ÷ 2         | 0        | 1         |
+
+B.Write both binary numbers properly.
+C.Apply the operator rule bit by bit.
+
+| Operator | Name        | Rule                                | Else Condition                      | Example            |    |        |
+| -------- | ----------- | ----------------------------------- | ----------------------------------- | ------------------ | -- | ------ |
+| `&`      | AND         | Result is `1` if both bits are `1`  | Else result is `0`                  | `1 & 1 = 1`        |    |        |
+| `        | `           | OR                                  | Result is `1` if any one bit is `1` | Else result is `0` | `1 | 0 = 1` |
+| `^`      | XOR         | Result is `1` if bits are different | Else result is `0`                  | `1 ^ 0 = 1`        |    |        |
+| `~`      | NOT         | Reverses the bits                   | `1 → 0` and `0 → 1`                 | `~10 = -11`        |    |        |
+| `>>`     | Right Shift | Moves bits to the right             | Empty left places become `0`        | `10 >> 1 = 5`      |    |        |
+| `<<`     | Left Shift  | Moves bits to the left              | Empty right places become `0`       | `10 << 1 = 20`     |    |        |
+
+D.Get the binary result.
+E.Convert the binary result back to decimal.
+| Power of 2 | Result |        multiple by the number of digit 
+| ---------- | ------ |        1 × 8 = 8    8 + 0 + 2 + 0 = 10
+| 2³         | 8      |        0 × 4 = 0
+| 2²         | 4      |        1 × 2 = 2
+| 2¹         | 2      |        0 × 1 = 0
+| 2⁰         | 1      |                                 
+                             
 6. Membership Operators
 Membership operatorsin python  are used for checking if the iterator or the given value is present in the sequence or not. These types of operators always return values in a TRUE or FALSE format. If the value is found in the sequence then the operator will return TRUE else the operator will return FALSE.
 
 Used to check membership.
 
 Operator	Meaning
-in	      Returns TRUE if the iterator is present in sequence
-not in	  Returns TRUE if the iterator is not present in sequence
+| Operator | Meaning                                                    | Example                       |
+| -------- | ---------------------------------------------------------- | ----------------------------- |
+| `in`     | Returns `True` if the value is present in the sequence     | `'a' in "apple"` → `True`     |
+| `not in` | Returns `True` if the value is not present in the sequence | `'z' not in "apple"` → `True` |
+
 
 7. Identity Operators
 Identity operators are used in Python programing language to check if the two values, variables, or constants are not only the same but also have the same memory location. These types of operators are used to compare and check the exact match of the values between two objects.
 
 Used to compare object identity.
 
-Operator	Meaning
-is	      Returns TRUE if a and b both are same
-is not	  Return TRUE if a and b both are not same
+| Operator | Meaning                                                          | Example               |
+| -------- | ---------------------------------------------------------------- | --------------------- |
+| `is`     | Returns `True` if both variables refer to the same object        | `a is b` → `True`     |
+| `is not` | Returns `True` if both variables do not refer to the same object | `a is not b` → `True` |
+
