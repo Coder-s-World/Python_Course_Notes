@@ -1,1 +1,71 @@
+Loop
+In programming loops are structure that repeats a sequence of instruction until a specific condition is met. Loops are most important topic to start any programming language. Lets check why loops in python are so important. Assume you have to print “hello world” for 5 times without using loops and with using loops and see the difference.
 
+Types of Loops in Python
+    for loop
+    while loop
+NOTE: There is no do-while loop in python.
+
+For Loop = > If we know how many times loop will itearate
+
+     [ Enter for loop ]
+               |
+               v
+       /-----------------\
+----> |   Check for last  |
+|     |        item       |
+|      \-----------------/
+|        /              \
+|       /                \
+|      | If item          | If no item 
+|      | exists           | remaining in the sequence
+|      v                  |
+/--------------\          |
+| Execute loop |          |
+|     body     |          |
+\--------------/          v
+                   [ Exit loop ]    
+
+Here is a concise breakdown of how that flowchart operates:
+
+1. Enter for loop (The Starting Point)
+This is the "Start" circle at the top. It represents the moment your code reaches the for statement. At this stage, the computer looks at the sequence (like a list of names or a range of numbers) and prepares to start from the beginning.
+
+2. Check for last item (The Decision Diamond)
+The diamond is the "brain" of the loop. Every time the loop starts a new round, it asks a question: "Is there another item left in this sequence?" This is the guard that prevents the loop from running forever. It checks the items one by one in order.
+
+3. The "True" Path: If there is an item...
+If the answer to the diamond's question is Yes, the flow moves downward: Execute loop body: The computer performs the actual task you wrote (like printing a value or doing a calculation).
+The Feedback Loop: Notice the arrow pointing from the bottom box back up to the diamond. Once the task is done for one item, it goes right back to the top to check for the next item.
+
+4. The "False" Path: If no item is remaining... Eventually, the computer will reach the end of the list. When the diamond asks "Is there another item?" and the answer is No:
+
+While Loop => if we know the condition when to stop the loop
+
+     [ Enter for loop ]
+               |
+               v
+       /-----------------\
+----> |   Expression      |
+|     |                   |
+|      \-----------------/
+|        /              \
+|       /                \
+|      | True             | False 
+|      |                  | 
+|      v                  |
+/--------------\          |
+| Statements   |          |
+|              |          |
+\--------------/          v
+                   [ Exit loop ]  
+
+1.Start: The program reaches the while loop.
+2.Check Condition: It looks at the condition (like "count < 5").
+3.If True: The code inside the loop runs.
+4.Update: Usually, something inside the loop changes the condition (like increasing the count).
+5.Repeat: Go back to step 2 and check the condition again.
+6.If False: The loop stops, and the program continues with the rest of the code.
+
+
+Exit loop: The loop breaks, and the computer moves on to whatever code comes after the loop.
