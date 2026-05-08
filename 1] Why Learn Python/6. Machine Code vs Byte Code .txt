@@ -14,3 +14,15 @@ It is slower than machine code.
 It is platform-independent.
 Generated before machine code.
 Example: Java bytecode (.class files).
+
+****** What is bytecode in Python ******
+
+ByteCode
+Machines are not able to understand the human language or high-level languages thus whenever we write code in any programing language, machine used a compiler or an interpreter to convert the human-readable code to machine code. When the code is converted to machine code a new file is created which is easier for a machine to understand and execute. Such files contain code in bytes which is the machine-readable format. So let’s discuss on the question more, What is bytecode in Python.
+
+Byte codes are referred to as the portable codes or p-codes. When a python code is interpreted into the machine language then the python code gets converted into bytes. These bytecodes are also called as the set of instructions for the virtual machine and the python interpreter is the implementation of the virtual machine. The set The intermediate format is called the bytecode. Bytecodes are :
+              Lower-level
+              Platform Independent
+              Efficient
+              Intermediate
+              Representation of source code
