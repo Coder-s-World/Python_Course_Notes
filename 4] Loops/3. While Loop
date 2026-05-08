@@ -89,3 +89,20 @@ while (True):
     print("Hello Geek")
 Note: It is suggested not to use this type of loop as it is a never-ending infinite loop where the condition is always true and we have to forcefully terminate the program (or loop execution).
 
+----------Nested While loop
+Run
+#printing a box pattern using nested while loop
+i,n=0,5
+while(i < n):
+    j=0
+    while(j < n):
+        print("*",end=" ")
+        j+=1
+    i+=1
+    print()
+Output:
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
