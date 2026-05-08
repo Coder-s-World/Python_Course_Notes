@@ -1,0 +1,312 @@
+-------------Function
+Function is resuable block of code to perform specific task.Functions helps in breaking our program into smaller and modular chunks which makes our program more organized and manageable. Also, it avoids repetition and makes the code reusable and execute the same logic whenever needed by calling the function.
+
+-----------Defining a Function
+A function can be defined using def keyword. Below is the syntax to define a function:
+
+syntax :-
+def function_name(parameters):
+  #statements
+  return expressions
+
+def = keyword
+function_name = function name
+patameters = paramenete
+#statements = body of statements
+return = function return
+
+Example :- 
+def welcome():
+  print("welcome to india")
+
+------------Calling a Function
+Simple Meaning of calling a function is to “tell the function to start working.”Calling a function means executing or using a function in a program. When a function is created, it only gets defined.
+To make it run, we need to call it using its name followed by parentheses ().
+
+syntax :- function_name(arguments)
+def welcome():
+  print("welcome to india")
+
+welcome()
+
+output - welcome to india
+
+----------------Function Arguments
+Arguments are values passed to a function when it is called. They allow functions to receive input data and perform operations using those values.
+
+Syntax
+def function_name(arguments):
+    # function body
+    return value
+
+def function_name(arguments): defines a function with optional arguments.
+#function body contains the statements to be executed.
+
+return value returns a result from the function. If no return statement is used, it returns None by default.
+Example: In this example, function checks whether the number passed as an argument is even or odd.
+
+def evenOdd(x):
+    if (x % 2 == 0):
+        return "Even"
+    else:
+        return "Odd"
+​
+print(evenOdd(16))
+print(evenOdd(7))
+
+Output
+Even
+Odd
+
+-------------------Types of Function Arguments
+Python supports different types of arguments that can be passed during a function call.
+
+---------------1. Default argument: Default argument use a predefined value when no value is passed during the function call.
+
+def myFun(x, y=50):
+    print("x: ", x)
+    print("y: ", y)
+​
+myFun(10)
+
+Output
+x:  10
+y:  50
+Explanation:
+
+y=50 sets a default value for parameter y and myFun(10) passes only one argument.
+Since y is not provided, it uses the default value 50.
+
+-----------------2. Keyword Arguments: pass values using parameter names, so argument order does not matter.
+
+def student(fname, lname):
+    print(fname, lname)
+​
+student(fname='Geeks', lname='Practice')
+student(lname='Practice', fname='Geeks')
+
+Output
+Geeks Practice
+Geeks Practice
+Explanation: fname and lname are passed using parameter names and arguments can be provided in any order.
+
+----------------------3. Positional Arguments: values are assigned to parameters based on their order in the function call.
+
+def nameAge(name, age):
+    print("Hi, I am", name)
+    print("My age is ", age)
+​
+print("Case-1:")
+nameAge("Olivia", 27)
+​
+print("Case-2:")
+nameAge(27, "Olivia")
+
+Output
+Case-1:
+Hi, I am Olivia
+My age is  27
+Case-2:
+Hi, I am 27
+My age is  Olivia
+Explanation:
+
+In Case-1, values match the correct parameters.
+In Case-2, values are swapped because the order changed.
+
+--------------------4. Arbitrary Arguments: allow functions to accept multiple values. This is done using two special symbols:
+
+*args collects extra positional arguments as a tuple.
+**kwargs collects extra keyword arguments as a dictionary.
+
+def myFun(*args, **kwargs):
+    print("Non-Keyword Arguments (*args):")
+    for arg in args:
+        print(arg)
+​
+    print("Keyword Arguments (**kwargs):")
+    for key, value in kwargs.items():
+        print(f"{key} == {value}")
+​
+myFun('Hey', 'Welcome', first='Geeks', mid='for', last='Geeks')
+
+Output
+Non-Keyword Arguments (*args):
+Hey
+Welcome
+Keyword Arguments (**kwargs):
+first == Geeks
+mid == for
+last == Geeks
+Explanation:
+
+*args stores extra positional arguments.
+**kwargs stores extra keyword arguments.
+loop prints all positional and keyword values separately
+
+-----------------Function within Functions
+A function defined inside another function is called an inner function (or nested function). It is used to organize related logic and access variables from the outer function.
+
+def f1():
+    s = 'I love GeeksforGeeks'
+    def f2():
+        print(s)
+        
+    f2()
+f1()
+
+Output
+I love GeeksforGeeks
+
+--------------------Return Statement
+Return is used to end a function and send a value back to the caller. It can return any data type, multiple values (packed into a tuple), or None if no value is given.
+
+Syntax
+return [expression]
+
+Parameters: expression is the value returned by the function. If no value is returned, it returns None by default.
+
+def sq_value(num):
+    return num**2
+​
+print(sq_value(2))
+print(sq_value(-4))
+
+Output
+4
+16
+Explanation:
+
+sq_value(num) accepts a number as input.
+num**2 calculates the square of the number.
+return sends the result back to the caller.
+
+---------------------------Pass by Reference and Pass by Value
+Variables refer to objects. Function behavior depends on whether the object is mutable or immutable.
+
+Mutable objects like lists can be modified inside functions.
+Immutable objects like integers and strings remain unchanged.
+
+def myFun(x):
+    x[0] = 20
+​
+b = [10, 11, 12, 13]
+myFun(b)
+print(b)
+​
+def myFun2(x):
+    x = 20
+​
+a = 10
+myFun2(a)
+print(a)
+
+Output
+[20, 11, 12, 13]
+10
+
+Explanation:
+
+myFun(x) modifies the first element of the list and lists are mutable, so the original list changes.
+myFun2(x) assigns a new value to x. Integers are immutable, so the original value of a remains unchanged.
+Note: Python uses pass-by-object-reference, where functions receive references to objects instead of actual copies.
+
+
+------------------------------------------------------------------------------
+Types of  Function
+Functions in python can be divided into two types
+
+Built-in Functions : Functions that are built into Python.
+User-defined Functions : Functions defined by the users themselves.
+
+-------------------------------------------------------------
+Built-in Functions => use this link for built-in function list
+https://www.geeksforgeeks.org/python/python-built-in-functions/
+
+-------------------------------------------------------------------
+--------------------------User-defined Functions = > User-Defined Function is a function created by the user to perform specific tasks in a program.Functions that we define ourselves to do certain specific task are referred as user-defined functions.
+
+Advantages :
+User-defined functions help to decompose a large program into small segments.
+Function can be used to include repeated codes and execute when needed by calling that function.
+Large project can be divided by making different functions.
+
+---------------Type of users defined function
+------------------Parameterized Functions
+These functions accept parameters (arguments) to process and return results dynamically. Parameters allow for flexibility, enabling the function to handle different inputs each time it is called.
+
+def fun(name):
+    print("Hello,", name)
+​
+fun("shakshi")
+
+Output
+Hello, shakshi
+Explanation: fun(name) prints a greeting with the provided name. When called with "shakshi", it outputs "Hello, shakshi".
+
+------------------2. Functions with default arguments
+A function can have default values assigned to its parameters. If no argument is provided when calling the function, it takes the default value.
+
+def fun(x, y=50):  
+    print("x:", x)  
+    print("y:", y)  
+​
+fun(10)
+
+Output
+x: 10
+y: 50
+Explanation: fun(x, y=50) takes two parameters, where y has a default value of 50. It prints the values of x and y. When called with fun(10), it uses 10 for x and the default value 50 for y.
+
+-----------------3. Keyword argument functions
+Function arguments can be passed using keywords to improve code readability. This ensures the correct mapping of values to parameters, regardless of their order.
+
+def fun(name, age):
+    print(name, "is", age, "years old.")
+​
+fun(age=21, name="shakshi")
+
+Output
+shakshi is 21 years old.
+Explanation: fun(name, age) prints the name and age with the message "is [age] years old." It is called using keyword arguments (age=21, name="shakshi"), which assigns the values explicitly to name and age.
+
+-------------------4. Variable length argument functions
+When the number of arguments is unknown, a function can accept multiple arguments using *args (for non-keyword arguments) or **kwargs (for keyword arguments).
+
+def fun(*args):
+    for arg in args:
+        print(arg)
+​
+fun("Python", "Java", "C++")
+
+Output
+Python
+Java
+C++
+Explanation: fun(*args) uses a variable-length argument list, allowing it to accept any number of arguments. It then iterates through each argument and prints it.
+
+------------------5. Functions with Return value
+A function can return a value using the return statement. This allows the function to send back a result for further computation.
+
+def fun(num):
+    return num * num
+​
+res = fun(5)
+print(res)
+
+Output
+25
+Explanation: fun(num) takes a number num as input and returns its square (num * num). When called with fun(5), it calculates 5 * 5 and stores the result in res.
+
+-------------------6. Lambda functions
+A lambda function is an anonymous (nameless) function that is defined in a single line using the lambda keyword. It is used for short, simple operations where defining a full function is unnecessary.
+
+res = lambda x: x * x
+print(res(4))
+
+Output
+16
+Explanation: lambda x: x * x takes one input x and returns its square (x * x). When res(4) is called, it computes 4 * 4, resulting in 16 .
+
+
+
