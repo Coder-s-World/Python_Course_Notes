@@ -1,0 +1,125 @@
+List
+List is built in data type which is use to store the elements. It is capable of storing multiple type data. 
+In Python, a list is like a special container or a row of boxes where you can store a collection of items. These items can be numbers, words, or even a mix of different things all together. Imagine a list as a row of mailboxes, each with its own number starting from zero. You can put anything inside these mailboxes, and you can easily find or change what's inside by knowing the mailbox number.
+    
+    -	List is mutable
+    -	It contain duplicate elements
+    -	It is heterogeneous means can hold multiple type of data like integer, string, Boolean, even        other list and data type
+    -	It is maintain the order in which they are inserted
+    -	Elements can be accessed using index number which start from 0.
+      Creating list 
+
+There are many ways to create list
+1.	Using square brackets -  Square brackets [] are used to create a list directly.
+
+a = [1, 2, 3, 4, 5] # List of integers
+b = ['apple', 'banana', 'cherry'] # List of strings
+c = [1, 'hello', 3.14, True] # Mixed data types
+print(a)
+print(b)
+print(c)
+
+2.	List() constructor - A list can also be created by passing an iterable (such as tuple, string or another list) to the list() constructor.
+
+a = list((1, 2, 3, 'apple', 4.5))  
+print(a)
+b = list("GFG")
+print(b)
+
+3.	Creating List with Repeated Elements - A list with repeated elements can be created using the multiplication (*) operator.
+
+a = [2] * 5
+b = [0] * 7
+print(a)
+print(b)
+
+Internal Representation of Lists
+
+Python list stores references to objects, not the actual values directly.
+  •	The list keeps memory addresses of objects like integers, strings, or booleans.
+  •	Actual objects exist separately in memory.
+  •	Modifying a mutable object inside a list changes the original object.
+  •	Reassigning an immutable object creates a new object instead of changing the old one.
+
+Accessing List elements
+In Python, there are several common ways to access elements of a list. Here are the main ones, explained clearly:
+________________________________________
+1. Using Index (Single Element)
+Lists are 0-indexed (first element is at index 0).
+my_list = [10, 20, 30, 40]
+
+print(my_list[0])  # 10
+print(my_list[2])  # 30
+________________________________________
+2. Negative Indexing
+Access elements from the end:
+print(my_list[-1])  # 40 (last element)
+print(my_list[-2])  # 30
+________________________________________
+
+3. Slicing (Multiple Elements)
+Get a range of elements:
+print(my_list[1:3])   # [20, 30]
+print(my_list[:2])    # [10, 20]
+print(my_list[2:])    # [30, 40]
+________________________________________
+4. Using Step in Slicing
+Skip elements:
+print(my_list[::2])   # [10, 30]
+print(my_list[::-1])  # [40, 30, 20, 10] (reverse list)
+
+Basic idea of slicing
+Syntax:
+list[start : end : step]
+•	start → where to begin (default = start of list) 
+•	end → where to stop (default = end of list) 
+•	step → how many steps to jump
+
+🔑 Simple way to remember:
+•	::2 → skip 1, take 1 
+•	[::-1] → reverse the list
+•	+ step → move forward 
+•	step → move backward 
+•	2 → skip one element 
+•	1 → take every element
+
+
+________________________________________
+5. Using Loop
+Access elements one by one:
+for item in my_list:
+    print(item)
+________________________________________
+6. Using Index with Loop
+If you need both index and value:
+for i in range(len(my_list)):
+    print(i, my_list[i])
+OR (better way):
+for i, val in enumerate(my_list):
+    print(i, val)
+________________________________________
+7. Access Nested Lists
+If list contains another list:
+nested = [[1, 2], [3, 4]]
+print(nested[0][1])  # 2
+
+c=[5,6,8,9]
+b=["hi",4.5,["cmdklcdmc"]]
+a=list(("njkndkndn"))
+
+
+c=[5,6,8,9]
+b=["hi",4.5,["cmdklcdmc"]]
+a=list(("njkndkndn"))
+
+
+print("0 index value is  ",c[0])
+print("all values", c)
+print("last value",c[-1])
+print("o to last ", c[:4])
+print("0 to all " , c[0:])
+print("start with 1 and skip 1 values print ", c[1::2])
+
+# start index value is 1, not mentioned end index value , skip value is -1 which print in reverse
+print("print in reverse mode ",c[::-1]) 
+
