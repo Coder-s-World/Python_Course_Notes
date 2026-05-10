@@ -1,14 +1,14 @@
-List
-List is built in data type which is use to store the elements. It is capable of storing multiple type data. 
-In Python, a list is like a special container or a row of boxes where you can store a collection of items. These items can be numbers, words, or even a mix of different things all together. Imagine a list as a row of mailboxes, each with its own number starting from zero. You can put anything inside these mailboxes, and you can easily find or change what's inside by knowing the mailbox number.
--	List is mutable
--	It contain duplicate elements
--	It is heterogeneous means can hold multiple type of data like integer, string, Boolean, even other list and data type
--	It is maintain the order in which they are inserted
--	Elements can be accessed using index number which start from 0.
-Creating list 
-There are many ways to create list
-1.	Using square brackets -  Square brackets [] are used to create a list directly.
+# List
+# List is built in data type which is use to store the elements. It is capable of storing multiple type data. 
+# In Python, a list is like a special container or a row of boxes where you can store a collection of items. These items can be numbers, words, or even a mix of different things all together. Imagine a list as a row of mailboxes, each with its own number starting from zero. You can put anything inside these mailboxes, and you can easily find or change what's inside by knowing the mailbox number.
+# -	List is mutable
+# -	It contain duplicate elements
+# -	It is heterogeneous means can hold multiple type of data like integer, string, Boolean, even other list and data type
+# -	It is maintain the order in which they are inserted
+# -	Elements can be accessed using index number which start from 0.
+# Creating list 
+# There are many ways to create list
+# 1.	Using square brackets -  Square brackets [] are used to create a list directly.
 
 a = [1, 2, 3, 4, 5] # List of integers
 b = ['apple', 'banana', 'cherry'] # List of strings
@@ -31,40 +31,40 @@ b = [0] * 7
 print(a)
 print(b)
 
-Internal Representation of Lists
-Python list stores references to objects, not the actual values directly.
-•	The list keeps memory addresses of objects like integers, strings, or booleans.
-•	Actual objects exist separately in memory.
-•	Modifying a mutable object inside a list changes the original object.
-•	Reassigning an immutable object creates a new object instead of changing the old one.
-Accessing List elements
-In Python, there are several common ways to access elements of a list. Here are the main ones, explained clearly:
-________________________________________
-1. Using Index (Single Element)
+# Internal Representation of Lists
+# Python list stores references to objects, not the actual values directly.
+# •	The list keeps memory addresses of objects like integers, strings, or booleans.
+# •	Actual objects exist separately in memory.
+# •	Modifying a mutable object inside a list changes the original object.
+# •	Reassigning an immutable object creates a new object instead of changing the old one.
+# Accessing List elements
+# In Python, there are several common ways to access elements of a list. Here are the main ones, explained clearly:
+# ________________________________________
+# 1. Using Index (Single Element)
 Lists are 0-indexed (first element is at index 0).
 my_list = [10, 20, 30, 40]
 
 print(my_list[0])  # 10
 print(my_list[2])  # 30
 ________________________________________
-2. Negative Indexing
+# 2. Negative Indexing
 Access elements from the end:
 print(my_list[-1])  # 40 (last element)
 print(my_list[-2])  # 30
 ________________________________________
 
-3. Slicing (Multiple Elements)
+# 3. Slicing (Multiple Elements)
 Get a range of elements:
 print(my_list[1:3])   # [20, 30]
 print(my_list[:2])    # [10, 20]
 print(my_list[2:])    # [30, 40]
 ________________________________________
-4. Using Step in Slicing
+# 4. Using Step in Slicing
 Skip elements:
 print(my_list[::2])   # [10, 30]
 print(my_list[::-1])  # [40, 30, 20, 10] (reverse list)
 
-Basic idea of slicing
+"""Basic idea of slicing
 Syntax:
 list[start : end : step]
 •	start → where to begin (default = start of list) 
@@ -76,16 +76,16 @@ list[start : end : step]
 •	+ step → move forward 
 •	step → move backward 
 •	2 → skip one element 
-•	1 → take every element
+•	1 → take every element"""
 
 
 ________________________________________
-5. Using Loop
+# 5. Using Loop
 Access elements one by one:
 for item in my_list:
     print(item)
 ________________________________________
-6. Using Index with Loop
+# 6. Using Index with Loop
 If you need both index and value:
 for i in range(len(my_list)):
     print(i, my_list[i])
@@ -93,7 +93,7 @@ OR (better way):
 for i, val in enumerate(my_list):
     print(i, val)
 ________________________________________
-7. Access Nested Lists
+# 7. Access Nested Lists
 If list contains another list:
 nested = [[1, 2], [3, 4]]
 print(nested[0][1])  # 2
@@ -114,13 +114,13 @@ print("start with 1 and skip 1 values print ", c[1::2])
 # start index value is 1, not mentioned end index value , skip value is -1 which print in reverse
 print("print in reverse mode ",c[::-1])
 
-Adding Elements into List
+"""Adding Elements into List
 Elements can be added to a list using the following methods:
 •	append(): Adds an single  element at the end of the list.  
 Syntax of append() method
 list.append(element)
 Parameter:
-element: The item to be appended to the list. This can be of any data type (integer, string, list, object, etc.). This parameter is mandatory, and omitting it will cause an error.
+element: The item to be appended to the list. This can be of any data type (integer, string, list, object, etc.). This parameter is mandatory, and omitting it will cause an error."""
 
 # append
 # single element
@@ -164,13 +164,13 @@ b = "cd"
 a.extend(b)
 print(a) # [a,b,c,d] 
 
-insert(): Adds an element at a specific position.
+"""insert(): Adds an element at a specific position.
 List insert() Method Syntax
 list_name.insert(index, element)
 Parameters:
 index: the index at which the element has to be inserted.
 element: the element to be inserted in the list.
-Return : The insert() method returns None. It only updates the current list.
+Return : The insert() method returns None. It only updates the current list."""
 
 
 #insert - list_name.insert(index,element)
@@ -224,13 +224,13 @@ d = [5,6,8,9]
 e = ["nknk","kgjkg"]
 sum = d + e
 
-•	clear(): removes all items. clear() method in Python is used to remove all elements from a list, effectively making it an empty list. This method does not delete the list itself but clears its content. It is a simple and efficient way to reset a list without reassigning it to a new empty list.
+"""clear(): removes all items. clear() method in Python is used to remove all elements from a list, effectively making it an empty list. This method does not delete the list itself but clears its content. It is a simple and efficient way to reset a list without reassigning it to a new empty list.
 Syntax of clear() Method
 list.clear()
 Parameters:
 The clear() method does not take any parameters.
 Return Type:
-It modifies the original list and does not return any value (None).
+It modifies the original list and does not return any value (None)."""
 
 #Clearing a list of strings
 
@@ -239,13 +239,13 @@ a = ["Geeks", "for", "Geeks"]
 a.clear()
 print(a) # output - []
 
-Practical Applications of clear() Method
+"""Practical Applications of clear() Method
 1. Reusing a List:
 clear() method allows us to empty a list without creating a new one, making it easy to reuse the same list for storing new data.
 2. Memory Optimization:
-Using clear() helps in releasing the memory held by the elements of the list, making it available for other operations without creating a new list object.
+Using clear() helps in releasing the memory held by the elements of the list, making it available for other operations without creating a new list object."""
 
-Updating Elements into List
+# Updating Elements into List
 
 # Updating Elements into List
 # Since lists are mutable, elements can be updated by assigning new values using their index.
@@ -257,11 +257,11 @@ print(a)
 # Output - [10, 25, 30, 40, 50]
 
 
-Removing Elements from List
+"""Removing Elements from List
 Elements can be removed from a list using the following methods:
 •	remove(): Removes the first occurrence of an element.
 •	pop(): Removes the element at a specific index or the last element if no index is specified.
-•	del statement: Deletes an element at a specified index.
+•	del statement: Deletes an element at a specified index."""
 
 #remove()
 list1 = [5,6,8,9,10]
@@ -296,7 +296,7 @@ matrix = [[1,2,3],
           [7,8,9]]
 print(matrix[1][2])
 
-List Comprehension in Python
+"""List Comprehension in Python
 List comprehension is a concise way to create new lists by applying an expression to each item in an existing iterable (like a list, tuple or range). It helps you write clean, readable and efficient code compared to traditional loops.
 Syntax
 [expression for item in iterable if condition]
@@ -310,7 +310,7 @@ Why Use List Comprehension?
 •	More readable: Avoids verbose loops and temporary variables.
 •	Faster execution: Often faster than equivalent for-loops.
 •	# List Comprehension in Python
-•	# Suppose you want to square every number in a list:
+•	# Suppose you want to square every number in a list:"""
 •	
 •	list = [1,2,3,4,5]
 •	square_list = [i ** 2 for i in list]
