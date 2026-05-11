@@ -1,0 +1,197 @@
+Writing Data to Files in Python
+
+Writing means storing data inside a file permanently.
+
+Python mainly uses:
+    write()
+    writelines()
+for writing data to files.
+
+Methods Used for Writing
+
+| Method         | Purpose               |
+| -------------- | --------------------- |
+| `write()`      | Writes single string  |
+| `writelines()` | Writes multiple lines |
+
+1. Writing Using write()
+
+The write() method writes text into a file.
+
+Syntax
+file.write(data)
+
+Example 1 — Basic Writing
+file = open("data.txt", "w")
+file.write("Hello Python")
+file.close()
+
+Output in File
+Hello Python
+
+Explanation
+| Statement               | Meaning                 |
+| ----------------------- | ----------------------- |
+| `open("data.txt", "w")` | Open file in write mode |
+| `write()`               | Writes data             |
+| `close()`               | Closes file             |
+
+Important About "w" Mode
+
+"w" mode:
+creates file if not exists
+removes old content if file already exists
+
+Example
+
+Suppose file contains:
+Old Data
+
+After:
+file = open("data.txt", "w")
+file.write("New Data")
+
+File becomes:
+New Data
+Old data is deleted.
+
+Writing Multiple Lines
+Use newline character:
+\n
+
+Example 2
+file = open("data.txt", "w")
+
+file.write("Python\n")
+file.write("Java\n")
+file.write("C++")
+file.close()
+
+Output in File
+Python
+Java
+C++
+
+2. Writing Using writelines()
+Used for writing multiple strings together.
+
+Syntax
+file.writelines(list)
+
+Example
+languages = ["Python\n", "Java\n", "C++"]
+file = open("data.txt", "w")
+file.writelines(languages)
+file.close()
+
+Output in File
+Python
+Java
+C++
+
+Important Point
+writelines():
+
+does NOT automatically add new lines
+you must use \n
+
+Difference Between write() and writelines()
+
+| Feature            | `write()`     | `writelines()`   |
+| ------------------ | ------------- | ---------------- |
+| Writes             | Single string | Multiple strings |
+| Input Type         | String        | List/Tuple       |
+| Newline Automatic? | No            | No               |
+
+
+Append mode adds data without deleting old content.
+
+Example
+file = open("data.txt", "a")
+file.write("\nWelcome")
+file.close()
+
+Output
+Python
+Java
+C++
+Welcome
+
+Using with Statement
+Best way to write files.
+
+Example
+with open("data.txt", "w") as file:
+    file.write("Hello")
+
+Advantage
+No need to write:
+
+file.close()
+because file closes automatically.
+
+Writing Numbers to File
+Numbers must be converted into string.
+
+Wrong Example
+file.write(100)
+
+This gives:
+
+TypeError
+
+Correct Example
+file.write(str(100))
+
+Example
+file = open("data.txt", "w")
+age = 20
+file.write(str(age))
+file.close()
+
+Writing User Input to File
+Example
+name = input("Enter name: ")
+file = open("student.txt", "w")
+file.write(name)
+file.close()
+
+Output Example
+
+If user enters:
+Python
+Then file contains:
+Python
+Writing Data Line by Line
+
+Example
+file = open("data.txt", "w")
+
+for i in range(1, 6):
+    file.write(str(i) + "\n")
+
+file.close()
+Output
+1
+2
+3
+4
+5
+
+File Pointer After Writing
+After writing, pointer moves automatically.
+
+Example:
+
+file.write("Hello")
+Pointer moves to end of "Hello".
+
+| Concept        | Meaning                   |
+| -------------- | ------------------------- |
+| `write()`      | Writes single string      |
+| `writelines()` | Writes multiple strings   |
+| `"w"` mode     | Overwrites file           |
+| `"a"` mode     | Adds data at end          |
+| `with`         | Safe file handling        |
+| `\n`           | New line character        |
+| `str()`        | Converts number to string |
