@@ -1,0 +1,236 @@
+Examples of Exception Handling in Python
+
+1. Handling ZeroDivisionError
+Problem
+
+Dividing a number by zero.
+Example
+try:
+    num = int(input("Enter number: "))
+    result = 10 / num
+    print(result)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+Output Example
+Enter number: 0
+Cannot divide by zero
+
+2. Handling ValueError
+Problem
+
+User enters invalid data type.
+Example
+try:
+    age = int(input("Enter age: "))
+    print(age)
+
+except ValueError:
+    print("Please enter numbers only")
+Output Example
+Enter age: abc
+Please enter numbers only
+
+3. Handling IndexError
+Problem
+Accessing invalid list index.
+
+Example
+try:
+    numbers = [10, 20, 30]
+    print(numbers[5])
+
+except IndexError:
+    print("Index does not exist")
+Output
+Index does not exist
+
+4. Handling KeyError
+Dictionary key not found.
+
+Example
+try:
+    student = {"name": "Mayuri"}
+    print(student["age"])
+
+except KeyError:
+    print("Key not found")
+Output
+Key not found
+
+5. Handling FileNotFoundError
+File does not exist.
+
+Example
+try:
+    file = open("data.txt")
+
+except FileNotFoundError:
+    print("File not found")
+Output
+File not found
+
+6. Handling Multiple Exceptions
+Example
+try:
+    num = int(input("Enter number: "))
+    print(10 / num)
+
+except ValueError:
+    print("Invalid input")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+Output 1
+Enter number: abc
+Invalid input
+Output 2
+Enter number: 0
+Cannot divide by zero
+
+7. Using else
+
+else runs when no exception occurs.
+Example
+try:
+    num = int(input("Enter number: "))
+    print(10 / num)
+
+except ZeroDivisionError:
+    print("Division by zero")
+
+else:
+    print("Program executed successfully")
+Output
+Enter number: 2
+5.0
+Program executed successfully
+
+8. Using finally
+finally always runs.
+
+Example
+try:
+    print(10 / 0)
+
+except ZeroDivisionError:
+    print("Error occurred")
+
+finally:
+    print("Execution completed")
+Output
+Error occurred
+Execution completed
+
+9. Using as Keyword
+Stores error message in variable.
+
+Example
+try:
+    print(10 / 0)
+
+except ZeroDivisionError as e:
+    print("Error:", e)
+Output
+Error: division by zero
+
+10. Generic Exception Handling
+Handles all exceptions.
+
+Example
+try:
+    x = int("abc")
+
+except Exception as e:
+    print("Error:", e)
+Output
+Error: invalid literal for int()
+
+11. Handling TypeError
+Example
+try:
+    print("10" + 5)
+
+except TypeError:
+    print("Cannot add string and integer")
+Output
+Cannot add string and integer
+
+12. Handling NameError
+Example
+try:
+    print(age)
+
+except NameError:
+    print("Variable not defined")
+Output
+Variable not defined
+
+13. Full Exception Handling Example
+Example
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    result = num1 / num2
+except ValueError:
+    print("Please enter valid numbers")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+else:
+    print("Result:", result)
+
+finally:
+    print("Program finished")
+Possible Outputs
+Case 1
+Enter first number: 10
+Enter second number: 2
+Result: 5.0
+Program finished
+
+Case 2
+Enter first number: 10
+Enter second number: 0
+Cannot divide by zero
+Program finished
+
+Case 3
+Enter first number: abc
+Please enter valid numbers
+Program finished
+
+Real Life Analogy
+
+| Situation      | Exception Handling     |
+| -------------- | ---------------------- |
+| ATM machine    | Handles wrong PIN      |
+| Login system   | Handles wrong password |
+| File opening   | Handles missing files  |
+| Calculator app | Handles invalid input  |
+
+Best Practices
+
+| Good Practice             | Reason                      |
+| ------------------------- | --------------------------- |
+| Catch specific exceptions | Better debugging            |
+| Use finally for cleanup   | Resources close properly    |
+| Avoid empty except        | Errors should not be hidden |
+| Use meaningful messages   | Easy understanding          |
+
+Final Summary
+
+| Block     | Purpose              |
+| --------- | -------------------- |
+| `try`     | Risky code           |
+| `except`  | Handle error         |
+| `else`    | Runs if no error     |
+| `finally` | Always runs          |
+| `as`      | Stores error message |
+
+
+
+
+
