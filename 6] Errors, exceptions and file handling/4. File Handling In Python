@@ -1,0 +1,356 @@
+File Handling in Python
+
+File handling refers to the process of performing operations on a file, such as creating, opening, reading, writing and closing it through a programming interface. It involves managing the data flow between the program and the file system on the storage device, ensuring that data is handled safely and efficiently.
+
+Need for File Handling
+Store data permanently, even after the program ends.
+Access external files like .txt, .csv, .json, etc.
+Process large files efficiently without using much memory.
+Automate tasks like reading configs or saving outputs.
+
+Types of Files
+| Type        | Description                                 |
+| ----------- | ------------------------------------------- |
+| Text File   | Stores text data (`.txt`)                   |
+| Binary File | Stores binary data (`.jpg`, `.mp3`, `.pdf`) |
+
+Main File Handling Operations
+| Operation | Purpose         |
+| --------- | --------------- |
+| Open      | Open file       |
+| Read      | Read file data  |
+| Write     | Write new data  |
+| Append    | Add data at end |
+| Close     | Close file      |
+| Delete    | Remove file     |
+
+
+Opening a File---------------------------
+To open a file, we can use open() function, which requires file-path and mode as arguments.
+
+Syntax:
+file = open('filename.txt', 'mode')
+
+filename.txt: name (or path) of the file to be opened.
+mode: mode in which you want to open the file (read, write, append, etc.).
+Note: If you don’t specify the mode, Python uses 'r' (read mode) by default.
+
+File Modes in Python
+| Mode   | Meaning         |
+| ------ | --------------- |
+| `"r"`  | Read mode       |
+| `"w"`  | Write mode      |
+| `"a"`  | Append mode     |
+| `"x"`  | Create new file |
+| `"t"`  | Text mode       |
+| `"b"`  | Binary mode     |
+| `"r+"` | Read + write    |
+| `"w+"` | Write + read    |
+| `"a+"` | Append + read   |
+
+
+Basic Example: Opening a File
+
+f = open("hello.txt", "r")
+print(f)
+Explanation: code opens file geek.txt in read mode. If the file exists, it returns a file object connected to that file; if the file does not exist, Python raises a FileNotFoundError.
+
+1. Read Mode (r)
+Used to read file contents.
+
+File must exist
+Default mode
+
+Example
+file = open("data.txt", "r")
+
+print(file.read())
+
+file.close()
+Output Example
+Hello Python
+
+Important Functions in Reading
+| Function      | Purpose                 |
+| ------------- | ----------------------- |
+| `read()`      | Reads complete file     |
+| `read(n)`     | Reads n characters      |
+| `readline()`  | Reads one line          |
+| `readlines()` | Reads all lines as list |
+
+Example — read(n)
+file = open("data.txt", "r")
+
+print(file.read(5))
+
+file.close()
+Example — readline()
+file = open("data.txt", "r")
+
+print(file.readline())
+
+file.close()
+Example — readlines()
+file = open("data.txt", "r")
+
+print(file.readlines())
+
+file.close()
+
+2. Write Mode (w)
+
+Used to write data into file.
+
+Important:
+
+creates file if not exists
+overwrites old data
+Example
+file = open("data.txt", "w")
+
+file.write("Hello Python")
+
+file.close()
+Output
+
+File content becomes:
+
+Hello Python
+Warning About w Mode
+
+If file already contains data:
+
+Old Data
+
+After write:
+
+New Data
+
+Old data is deleted.
+
+3. Append Mode (a)
+
+Adds data at the end of file.
+
+old data remains safe
+creates file if not exists
+Example
+file = open("data.txt", "a")
+
+file.write("\nWelcome")
+
+file.close()
+Output
+Hello Python
+Welcome
+4. Create Mode (x)
+
+Creates new file.
+
+gives error if file already exists
+Example
+file = open("new.txt", "x")
+
+file.close()
+5. Binary Mode (b)
+
+Used for binary files.
+
+Example:
+
+images
+videos
+audio
+Example
+file = open("photo.jpg", "rb")
+6. Read and Write Mode (r+)
+
+Allows both reading and writing.
+
+Example
+file = open("data.txt", "r+")
+
+print(file.read())
+
+file.write("Python")
+
+file.close()
+
+Closing a File ----------------------------
+file.close() method closes the file and releases the system resources. If the file was opened in write or append mode, closing ensures that all changes are properly saved.
+
+Using with Statement
+Best method for file handling.
+
+Automatically closes file.
+
+Advantages of with
+| Advantage       | Explanation                |
+| --------------- | -------------------------- |
+| Automatic close | File closes automatically  |
+| Cleaner code    | Less code                  |
+| Safe handling   | Better resource management |
+
+File Pointer Functions
+| Function | Purpose          |
+| -------- | ---------------- |
+| `tell()` | Current position |
+| `seek()` | Change position  |
+
+Example — tell()
+file = open("data.txt", "r")
+print(file.tell())
+file.read(5)
+print(file.tell())
+file.close()
+
+Example — seek()
+file = open("data.txt", "r")
+file.seek(0)
+print(file.read())
+file.close()
+file = open("hello.txt", "r")
+
+Deleting a File -------------------------
+Python uses os module.
+
+Example
+import os
+os.remove("data.txt")
+
+check if file exist -----------------
+import os
+
+if os.path.exists("data.txt"):
+    os.remove("data.txt")
+
+Checking File Properties-----------------------
+Once the file is open, we can check some of its properties:
+
+f = open("hello.txt", "r")
+print("Filename:", f.name)
+print("Mode:", f.mode)
+print("Is Closed?", f.closed)
+​
+f.close()
+print("Is Closed?", f.closed)
+Output
+
+Filename: hello.txt
+Mode: r
+Is Closed? False
+Is Closed? True
+
+Explanation:
+
+f.name: Returns the name of the file that was opened (in this case, "hello.txt").
+f.mode: Tells us the mode in which the file was opened. Here, it’s 'r' which means read mode.
+f.closed: Returns a boolean value- False when file is currently open otherwise True.
+Reading a File
+Reading a file can be achieved by file.read() which reads the entire content of the file. After reading, it’s good practice to close the file to free up system resources.
+
+Example: Reading a File in Read Mode (r)
+
+file = open("hello.txt", "r")
+content = file.read()
+print(content)
+file.close()
+Output
+
+Hello world
+GeeksforGeeks
+123 456
+
+Real-Life Examples of File Handling -----------------
+
+| Application       | Use                 |
+| ----------------- | ------------------- |
+| Notepad           | Save text           |
+| Banking system    | Store customer data |
+| Login system      | Store user details  |
+| Attendance system | Save records        |
+| Games             | Save progress       |
+
+Difference Between Modes----------------------
+
+| Mode | Read | Write | Create File | Overwrite       |
+| ---- | ---- | ----- | ----------- | --------------- |
+| `r`  | Yes  | No    | No          | No              |
+| `w`  | No   | Yes   | Yes         | Yes             |
+| `a`  | No   | Yes   | Yes         | No              |
+| `x`  | No   | Yes   | Yes         | Error if exists |
+| `r+` | Yes  | Yes   | No          | No              |
+
+
+Writing a File ------------------------------------
+Writing to a file is done using the mode "w". This creates a new file if it doesn’t exist, or overwrites the existing file if it does. The write() method is used to add content. After writing, make sure to close the file.
+
+Example: Writing to a file (overwrites if file exists)
+
+with open("hello.txt", "w") as file:
+    file.write("Hello, Python!\n")
+    file.write("File handling is easy with Python.")
+​
+print("File written successfully")
+Output
+
+Hello, Python!
+File handling is easy with Python.
+
+Explanation:
+
+"w" mode opens the file for writing (overwrites existing content if the file already exists).
+write() method adds new text to the file.
+When using with, the file closes automatically at the end of the block.
+Using with Statement
+Instead of manually opening and closing the file, you can use the with statement, which automatically handles closing. This reduces the risk of file corruption and resource leakage.
+
+Example: Let's assume we have a file named geek.txt that contains text "Hello, World!".
+
+with open("hello.txt", "r") as file:
+    content = file.read()
+    print(content)
+Output
+
+Hello, World!
+
+Handling Exceptions When Closing a File ----------------------------
+It's important to handle exceptions to ensure that files are closed properly, even if an error occurs during file operations. Here, the finally block ensures the file is closed even if an error occurs.
+
+
+try:
+    file = open("hello.txt", "r")
+    content = file.read()
+    print(content)
+except FileNotFoundError as e:
+    print("Error:", e)
+finally:
+    file.close()
+Output
+
+Hello, World!
+
+Explanation:
+
+try block contains code that may raise an error.
+except block handles specific errors like missing files.
+finally block ensures the file is always closed, even if an error occurs.
+
+| Concept       | Meaning            |
+| ------------- | ------------------ |
+| `open()`      | Opens file         |
+| `read()`      | Reads file         |
+| `write()`     | Writes data        |
+| `append()`    | Adds data          |
+| `close()`     | Closes file        |
+| `with`        | Safe file handling |
+| `seek()`      | Move pointer       |
+| `tell()`      | Current position   |
+| `os.remove()` | Delete file        |
+
+| Good Practice        | Reason            |
+| -------------------- | ----------------- |
+| Use `with`           | Automatic closing |
+| Handle exceptions    | Prevent crashes   |
+| Close files properly | Save resources    |
+| Use append carefully | Avoid overwriting |
