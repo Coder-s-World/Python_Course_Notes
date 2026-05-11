@@ -1,0 +1,25 @@
+
+Common Exceptions in Python
+
+| Exception Type        | Meaning                      | Example Situation            |
+| --------------------- | ---------------------------- | ---------------------------- |
+| `SyntaxError`         | Wrong syntax in code         | Missing `:` or bracket       |
+| `IndentationError`    | Wrong indentation            | Incorrect spaces/tabs        |
+| `NameError`           | Variable not defined         | Using unknown variable       |
+| `TypeError`           | Wrong data type operation    | Adding string and integer    |
+| `ValueError`          | Correct type but wrong value | Converting `"abc"` to int    |
+| `IndexError`          | List index out of range      | Accessing invalid index      |
+| `KeyError`            | Dictionary key not found     | Accessing missing key        |
+| `AttributeError`      | Invalid attribute/method     | Wrong method name            |
+| `ZeroDivisionError`   | Division by zero             | `10 / 0`                     |
+| `FileNotFoundError`   | File does not exist          | Opening missing file         |
+| `ImportError`         | Cannot import module         | Wrong module name            |
+| `ModuleNotFoundError` | Module not installed         | Importing unavailable module |
+| `OverflowError`       | Number too large             | Huge mathematical result     |
+| `MemoryError`         | Memory full                  | Large object creation        |
+| `RuntimeError`        | General runtime issue        | Unexpected runtime behavior  |
+| `RecursionError`      | Too much recursion           | Infinite recursive calls     |
+| `StopIteration`       | Iterator finished            | Looping beyond iterator      |
+| `KeyboardInterrupt`   | User interrupted program     | Pressing `Ctrl + C`          |
+| `EOFError`            | Input ended unexpectedly     | No input provided            |
+| `AssertionError`      | Assertion failed             | Condition becomes false      |
