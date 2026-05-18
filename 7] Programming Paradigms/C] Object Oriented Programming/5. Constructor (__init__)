@@ -1,0 +1,167 @@
+Constructors in Python
+
+In Python, a constructor is a special method that is called automatically when an object is created from a class. Its main role is to initialize the object by setting up its attributes or state.
+
+The method __new__ is the constructor that creates a new instance of the class while __init__ is the initializer that sets up the instance's attributes after creation. These methods work together to manage object creation and initialization.
+
+__new__ Method
+This method is responsible for creating a new instance of a class. It allocates memory and returns the new object. It is called before __init__.
+
+class ClassName:
+    def __new__(cls, parameters):
+        instance = super(ClassName, cls).__new__(cls)
+        return instance
+
+__init__ Method
+This method initializes the newly created instance and is commonly used as a constructor in Python. It is called immediately after the object is created by __new__ method and is responsible for initializing attributes of the instance.
+
+Syntax:
+
+class ClassName:
+    def __init__(self, parameters):
+        self.attribute = value
+Note: It is called after __new__ and does not return anything (it returns None by default).
+
+Differences Between __init__ and __new__
+
+__new__ method:
+Responsible for creating a new instance of the class.
+Rarely overridden but useful for customizing object creation and especially in singleton or immutable objects.
+
+__init__ method:
+Called immediately after __new__.
+Used to initialize the created object.
+
+Types of Constructors
+Constructors can be of two types.
+
+1. Default Constructor
+A default constructor does not take any parameters other than self. It initializes the object with default attribute values.
+
+class Car:
+    def __init__(self):
+​
+        #Initialize the Car with default attributes
+        self.make = "Toyota"
+        self.model = "Corolla"
+        self.year = 2020
+​
+# Creating an instance using the default constructor
+car = Car()
+print(car.make)
+print(car.model)
+print(car.year)
+
+Output
+Toyota
+Corolla
+2020
+
+2. Parameterized Constructor
+A parameterized constructor accepts arguments to initialize the object's attributes with specific values.
+
+class Car:
+    def __init__(self, make, model, year):
+      
+        #Initialize the Car with specific attributes.
+        self.make = make
+        self.model = model
+        self.year = year
+​
+# Creating an instance using the parameterized constructor
+car = Car("Honda", "Civic", 2022)
+print(car.make)
+print(car.model)
+print(car.year)
+
+Output
+Honda
+Civic
+2022
+
+__init__() with Parameters
+You can pass parameters to initialize multiple attributes.
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+​
+a = Person("Max", 30)
+b = Person("Emilia", 25)
+​
+print(a.name, a.age) 
+print(b.name, b.age)
+
+Output
+Max 30
+Emilia 25
+
+Explanation:
+
+self: refers to the current object (always the first parameter).
+name and age: parameters passed when creating the object.
+self.name and self.age: object attributes that store these values.
+
+Default Parameters in __init__()
+Like regular functions, __init__() can have parameters with default values.
+
+class Dog:
+    def __init__(self, name, breed="Mixed", age=1):
+        self.name = name
+        self.breed = breed
+        self.age = age
+​
+a = Dog("Buddy")
+b = Dog("Max", "Golden Retriever", 5)
+​
+print(a.name, a.breed, a.age)  
+print(b.name, b.breed, b.age)
+
+Output
+Buddy Mixed 1
+Max Golden Retriever 5
+
+Explanation:
+
+breed="Mixed" and age=1 are default values.
+When creating Dog("Buddy"), Python uses the defaults, breed = "Mixed", age = 1.
+When creating Dog ("Max", "Golden Retriever", 5), the defaults are overwritten by the provided values.
+
+__init__() Method with Inheritance
+When using inheritance, both parent and child classes can have __init__() methods.
+
+class A:
+    def __init__(self):
+        print("A init called")
+​
+class B(A):
+    def __init__(self):
+        super().__init__()   # Call parent __init__
+        print("B init called")
+​
+obj = B()
+
+Output
+A init called
+B init called
+
+Explanation:
+
+When obj = B() is created, Python first calls B.__init__(). Inside B.__init__, the line super().__init__() calls the parent’s (A) constructor.
+As a result, "A init called" is printed first.
+After the parent class initialization completes, remaining code in B.__init__() executes and "B init called" is printed.
+
+Destructor in Python
+
+Python also has a special method called destructor:
+
+__del__()
+
+Used when object is destroyed.
+
+Example
+class Demo:
+
+    def __del__(self):
+        print("Object Destroyed")
