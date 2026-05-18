@@ -1,0 +1,137 @@
+Algorithm 
+
+What is an Algorithm?
+=> An Algorithm is a set of step-by-step instructions used to solve a problem or complete a task.
+=> It tells the computer what to do, how to do it, and when to stop.
+
+Simple Definition
+Algorithm = A clear sequence of steps to get the correct result.
+
+Why Do We Need Algorithms?
+Algorithms help us to:
+
+Purpose	Explanation
+| Purpose              | Explanation                                 |
+| -------------------- | ------------------------------------------- |
+| Solve problems       | Find solutions in an organized way          |
+| Save time            | Complete tasks faster                       |
+| Reduce errors        | Follow proper logical steps                 |
+| Automate work        | Make computers perform tasks automatically  |
+| Handle complex tasks | Solve difficult calculations and operations |
+
+
+Real-Life Example of an Algorithm
+  Making Maggi
+  Boil water
+  Add noodles
+  Add tastemaker
+  Cook for 2 minutes
+  Serve
+These ordered steps form an algorithm.
+
+Uses of Algorithms
+| Field                   | Use                              |
+| ----------------------- | -------------------------------- |
+| Computer Programming    | Sorting, searching, calculations |
+| Banking                 | Transaction processing           |
+| Google Maps             | Finding shortest route           |
+| Artificial Intelligence | Face recognition, chatbots       |
+| Data Science            | Data analysis and prediction     |
+| Online Shopping         | Product recommendations          |
+
+
+Characteristics (Properties) of an Algorithm
+| Property             | Meaning                                    |
+| -------------------- | ------------------------------------------ |
+| Clear Steps          | Instructions must be understandable        |
+| Input                | Takes data if needed                       |
+| Output               | Produces result                            |
+| Finite               | Must stop after some steps                 |
+| Effective            | Steps should be practical                  |
+| Deterministic        | Same input gives same output               |
+| Language Independent | Can be written in any programming language |
+
+Ways to Express an Algorithm
+
+| Method           | Explanation                                 |
+| ---------------- | ------------------------------------------- |
+| Natural Language | Written in simple English                   |
+| Flowchart        | Diagram representation                      |
+| Pseudocode       | Code-like format without programming syntax |
+
+Steps to Design an Algorithm
+
+1. Understand the Problem
+   Know what needs to be solved.
+
+2. Identify Inputs
+   Determine what data is required.
+
+3. Identify Outputs
+   Determine expected result.
+
+4. Apply Logic
+   Think of solution steps.
+
+5. Write the Algorithm
+   Arrange steps in correct order.
+
+Example: Largest of Three Numbers
+
+Problem
+Find the largest among three numbers.
+
+Inputs
+
+Three numbers:
+num1
+num2
+num3
+
+Output
+Largest number
+
+Algorithm
+    1.Start
+    2.Read num1, num2, num3
+    3.Compare numbers
+    4.If num1 is greater than both → largest = num1
+    5.Else if num2 is greater than num3 → largest = num2
+    6.Else → largest = num3
+    7.Print largest
+    8.Stop
+
+Python Program Example
+num1 = 10
+num2 = 25
+num3 = 15
+
+if num1 > num2 and num1 > num3:
+    largest = num1
+elif num2 > num3:
+    largest = num2
+else:
+    largest = num3
+
+print("Largest number:", largest)
+Output
+Largest number: 25
+
+Advantages of Algorithms
+| Advantage              | Explanation                     |
+| ---------------------- | ------------------------------- |
+| Easy to understand     | Step-by-step process            |
+| Helps in coding        | Makes programming easier        |
+| Saves development time | Clear planning before coding    |
+| Easier debugging       | Errors can be identified easily |
+
+Disadvantages of Algorithms
+| Disadvantage               | Explanation                       |
+| -------------------------- | --------------------------------- |
+| Time-consuming             | Writing detailed steps takes time |
+| Complex for large problems | Large algorithms become difficult |
+
+Important Point
+
+Every program starts with an algorithm.
+Algorithm → Flowchart/Pseudocode → Program → Output
