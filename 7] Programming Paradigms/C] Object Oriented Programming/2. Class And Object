@@ -1,0 +1,287 @@
+Introduction to Classes in Python
+A Class is an object constructor or a blueprint from which objects are created. It provides a means of bundling data and functionality together.
+In Python, we have classes to help us bring all the related objects and functionality together so that it helps us to manage our code easily.
+
+Unlike other programming languages, Python revolves around the concept of objects. Hence, it is an Object-Oriented Programming Language(OOPs).
+
+Classes and objects are two main aspects of OOPs.
+
+Class in python are the user-defined blueprints that help us create an object. Objects are the instances of a particular class. Every other element in Python will be an object of some class, such as the string, dictionary, number(20,30), etc. will be an object of some corresponding built-in class(int, str) in Python.
+
+Creating a Class in Python
+Creating a class is as easy as creating a function in Python. In function, we start with the def keyword while class definitions begin with the keyword class.
+
+Following the keyword class, we have the class identifier(i.e. the name of the class we created) and then the : (colon) operator after the class name.
+
+In the next indented lines(statement 1..n) are the members of the class. Also, the variables inside the class are known as attributes. The attributes can be accessed later on in the program using the dot(.) operator.
+
+The syntax for creating a Class in Python is as follows:
+
+class ClassName:
+    # Statement 1
+    # Statement 2
+    .
+    .
+    # Statement n
+
+Let’s take a simple example of a class named Scaler.
+
+class Scaler:
+    pass
+
+Note: The keyword pass denotes an empty class. It is written just to avoid any errors in the console while running the above code.
+
+Python Class Attributes and Methods
+To make the most of Python Classes, we also need to add some functionality to the classes. We can make this possible with the help of attributes and methods.
+
+We need to set some attributes which would contain some functions and data. These would add some functionality to our code.
+
+Those functions which we define inside the class are known as methods.
+
+Let’s take a look at these additional functionalities in brief.
+
+Python Class Attributes
+These are the variables that are defined inside the particular class and can be used by all the objects. These attributes can, later on, be called by using the class and attribute name with the dot(.) operator.
+
+Let’s take a look at an example for further understanding.
+
+class Scaler:
+    Course = 'Python'
+
+Here we have a class named Scaler, with a class attribute named Course with a fixed value (ie ‘Python’).
+
+Note: The value of any attributes will remain the same for all objects until and unless it is changed explicitly later on in the code.
+
+Let’s continue with the above example to define some attributes and access it.
+
+class Scaler:
+    Course1 = 'Python'
+    Course2 = 'C++'
+    Course3 = 'Java'
+# Accessing the values of the attributes
+print(Scaler.Course1)
+print(Scaler.Course3)
+# Accessing through object instantiation.
+obj= Scaler()
+print(obj.Course2)
+
+Output:
+Python
+Java
+C++
+
+Here we have defined several attributes inside the Scaler Class. Also, we have shown two ways of accessing the values of those attributes. One, by directly using the class name and the other by using an object(class instance). Assigning a class to a variable is known as object instantiation.
+
+Note: If we change the value of the attribute using the class name(the first method in the above example), then it would change across all the instances of that class. While if we change the value of an attribute using class instance(object instantiation), it would only change the value of the attribute in that instance only.
+
+Let’s show an example to have clarity on this concept:
+
+class Scaler:
+    Course = 'Python'
+# Changing value using Class Name
+Scaler.Course = 'Machine Learning'
+obj= Scaler()
+print(obj.Course)
+# Changing value using Class Instance 
+obj.Course = 'AI'
+print(obj.Course)   # Value will change in this instance only
+print('Using class instance would not reflect the changes to other instances')
+print(Scaler.Course) # Value haven't changed
+obj2= Scaler()
+print(obj2.Course)   # Value haven't changed
+
+Output:
+Machine Learning
+AI
+Using class instance would not reflect the changes to other instances
+Machine Learning
+Machine Learning
+
+Python Class Methods
+Once we have defined the class attributes, we can even define some functions inside the particular class that can access the class attribute and can add more functionality to the existing code.
+
+These defined functions inside a class are known as methods. We can define as many methods as we want inside a single class.
+
+Syntax:
+We define a method(function) inside a class using the def keyword, followed by the method name. We then pass some arguments through the method.
+
+Note: When we define a method, it must at least pass a single parameter which is generally named as self. It refers to the current instance of the class.
+
+We can call this parameter by any name, other than self if we want.
+
+Let’s take a look at an example of the same.
+
+class Scaler:
+    def CourseDetails(self): 
+        print('Course Information')
+
+We can also pass other arguments inside the CourseDetails function if we want.
+
+For example, let’s say we have a class Scaler, in which we have an attribute named “name” and a method named CourseDetails. The method would take the argument name along with self. We can also pass multiple arguments as per our requirements in the code.
+
+class Scaler:
+    name = 'Python'
+    
+    def CourseDetails(self, name): 
+        self.name = name
+
+Instance Attributes (_init_method) in Python:
+We can also provide the values of the attributes during the time of object creation. Instance attributes are attached to the instance of a class. Whenever a new object of the class is created, this method is called.
+
+This is done by defining the attributes under the _init_method. The init method is similar to the constructors as in other programming languages(C++, Java). Such a method contains statements that would be executed during the run time(time of object creation).
+
+Let’s take an example to have more clarity on this particular method. This method begins with a double underscore(__).
+
+class Scaler:
+  # init method
+  def __init__(self, name):
+    self.name = name
+  # normal method
+  def CourseDetails(self):
+    print('The name of this course is', self.name)
+study1 = Scaler('Python')
+study1.CourseDetails()
+study2 = Scaler('Machine Learning')
+study2.CourseDetails()
+
+Output:
+The name of this course is Python
+The name of this course is Machine Learning
+
+Note: We can define separate attribute values for different objects(study1, study2) of a class.
+
+Python Class Properties
+In Python, with the property() function inside the class, we can define some additional functionalities.
+
+The property() function, just like Java and other languages, takes the set, get and delete methods as arguments and returns an object. These functionalities can be easily incorporated into the code with property() function.
+
+Let’s look at an example to understand the property() function –
+
+class Scaler:
+    def __init__(self):
+        self.__name='Python'
+    def setCourseName(self, name):
+        print('"setCourseName()" is called here')
+        self.__name=name
+    def getCourseName(self):
+        print('"getCourseName()" is called here')
+        return self.__name
+    name=property(getCourseName, setCourseName)
+obj = Scaler()
+obj.name = "C++"
+print(obj.name)
+
+Output:
+"setCourseName()" is called here
+"getCourseName()" is called here
+C++
+
+Here the property(getCourseName, setCourseName) returns the property object and then assigns it to the parameter name.
+
+Note: Using a property decorator (@property) is recommended, instead of the property() method, though both work well.
+
+
+Creating an object in Python --------------------------
+After declaring a class in Python when we create an instance of that class, it is known as the object of the class. The process of creating an object is called instantiation. The classes are essentially like a template to create the objects. The object is created using the name of the class. The object shares all the behavior and attributes of the class, such as the variables and values present in the class. Also, the object inherits the functions mentioned in the class, along with the class's behavior.
+
+Before creating an object, we should know that it contains such properties to distinguish it from others.
+
+State - The state of an object is determined by the attributes of the object(i.e., the different items we have in the class, which the object inherits.).
+Behavior - The behavior is represented by the methods of the object. It shows the difference and similarities of the functionality of an object to other objects.
+Identity - Each and every object must be unique on its own. We can make this by giving it a unique name(like obj1, obj3, new_obj, etc.).
+The syntax of creating an object of a particular class is as follows:
+
+[object_name] = [class_name](arguments/parameters)
+
+Here in comparison to the above example, the object_name is like the car models, namely, Hyundai, Ford, etc. The class_name is similar to the car blueprint. The arguments are just like the car's features, which can pass to some particular car models(objects).
+
+Accessing Object's variables in Python
+Let's take an example. Here we have created an object of the class named Scaler.
+
+# Creating a class named Scaler
+class Scaler:
+  a = 10
+  b = 25
+  c = 50
+
+# Creating an object named "obj1", "obj2" & accessing the class properties(attributes).
+
+obj1 = Scaler()
+print(obj1.a)
+print(obj1.b)
+
+obj2 = Scaler()
+print(obj2.c)
+
+Output:
+10
+25
+50
+
+In the above code snippet, we have created a class named Scaler, which has two attributes, a and b. We created an object called “obj” for that class. Using the object, along with the dot(.) operator, we accessed the values of the attributes(here a & b)
+
+Note: A single class can have multiple objects(instances), such as obj1, obj2, etc. Here in the above code, obj1 is accessing the attributes a & b of the class Scaler, while obj2 is accessing the attribute c.
+
+Accessing Object's functions in Python
+As we know, inside classes, we can declare functions, which are known as methods. Objects can also contain such methods(functions) and pass the arguments through those methods. Methods of an object are the corresponding function of that particular class.
+
+Let's take an example to understand this concept. We will create a method in the Scaler class and execute it on the object.
+
+# Creating a class named Scaler
+class Scaler:
+  def __init__(self, name, age, hobby):
+    self.name = name
+    self.age = age
+    self.hobby= hobby
+
+  def new(self):
+    print("Heyy my name is " + self.name + ". I Love " + self.hobby)
+
+obj2 = Scaler("Vikram", 24, "coding")
+obj2.new()
+
+Output
+Heyy my name is Vikram. I Love coding
+
+In the above code snippet, we have created a class named Scaler. In it, we have defined two methods(_init_ & new). We have created an object “obj2”, which is the instance of the class, and it accesses the function new(), while also passing three arguments. This way, the object can access the functions.
+
+Note:.
+
+a. The init method is called each and every time a new object is being created from any class. The init method is similar to the constructors as in other programming languages(C++, Java). Such a method contains statements that would be executed during the run time(time of object creation). This method begins with a double underscore(__).
+
+b. Also, the first argument which is passed in the function of the class must be the object itself. So it’s conventionally called “self”, passed as the first argument, followed by the subsequent arguments (such as age, hobby, etc.). The “self” refers to the current instance of the class. We can call this parameter by any name other than “self” if we want.
+
+Modifying Object's properties in Python
+Once we declare objects, we can later modify their properties and values. Let's take an example to understand how this works. Here we would be creating a class named Scaler and would declare an object. We would be trying to change the object property by changing the attribute value.
+
+# Creating a class named Scaler
+class Scaler:
+  a = 10
+
+# Declaring an object
+obj1 = Scaler()
+print(obj1.a)
+
+#Modifying value
+obj1.a = 200
+print("After modifying the object properties")
+print(obj1.a) 
+
+Output
+10
+After modifying the object properties
+200
+
+Here in the above code snippet, we set the value of the object “obj1”, from 10 to 200. By accessing the value of the attribute(here, it is “a”) through the object (i.e., obj1.a) and assigning a different value to it, we can change any of the properties of each and every object of a class.
+
+Deleting Object's properties in Python
+We can even delete the properties(also known as attributes) of an object with the help of the del keyword. Continuing with the previous example of the Scaler class, here we delete the “a” property from the “obj1” object.
+
+del obj1.a
+
+Deleting an Object in Python
+You created an object earlier and now want to delete it? We also have a way to delete an object which was created earlier in the code by using the del keyword.
+
+del obj1
+
+Note: After deleting the object of a class, the name of the object which is bound to it gets deleted, but however the object continues to exist in the memory with no name assigned to it. Later it is automatically destroyed by a process known as garbage collection.
