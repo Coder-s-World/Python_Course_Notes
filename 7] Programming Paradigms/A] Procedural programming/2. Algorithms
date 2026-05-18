@@ -1,16 +1,16 @@
 Algorithm 
 
-What is an Algorithm?
+What is an Algorithm?------------------------------
 => An Algorithm is a set of step-by-step instructions used to solve a problem or complete a task.
 => It tells the computer what to do, how to do it, and when to stop.
 
-Simple Definition
+Simple Definition ------------------------------
 Algorithm = A clear sequence of steps to get the correct result.
 
-Why Do We Need Algorithms?
+Why Do We Need Algorithms? ------------------------------
 Algorithms help us to:
 
-Purpose	Explanation
+Purpose	Explanation ------------------------------
 | Purpose              | Explanation                                 |
 | -------------------- | ------------------------------------------- |
 | Solve problems       | Find solutions in an organized way          |
@@ -20,7 +20,7 @@ Purpose	Explanation
 | Handle complex tasks | Solve difficult calculations and operations |
 
 
-Real-Life Example of an Algorithm
+Real-Life Example of an Algorithm ------------------------------
   Making Maggi
   Boil water
   Add noodles
@@ -29,7 +29,7 @@ Real-Life Example of an Algorithm
   Serve
 These ordered steps form an algorithm.
 
-Uses of Algorithms
+Uses of Algorithms ------------------------------
 | Field                   | Use                              |
 | ----------------------- | -------------------------------- |
 | Computer Programming    | Sorting, searching, calculations |
@@ -40,7 +40,7 @@ Uses of Algorithms
 | Online Shopping         | Product recommendations          |
 
 
-Characteristics (Properties) of an Algorithm
+Characteristics (Properties) of an Algorithm ------------------------------
 | Property             | Meaning                                    |
 | -------------------- | ------------------------------------------ |
 | Clear Steps          | Instructions must be understandable        |
@@ -51,7 +51,7 @@ Characteristics (Properties) of an Algorithm
 | Deterministic        | Same input gives same output               |
 | Language Independent | Can be written in any programming language |
 
-Ways to Express an Algorithm
+Ways to Express an Algorithm ------------------------------
 
 | Method           | Explanation                                 |
 | ---------------- | ------------------------------------------- |
@@ -59,7 +59,7 @@ Ways to Express an Algorithm
 | Flowchart        | Diagram representation                      |
 | Pseudocode       | Code-like format without programming syntax |
 
-Steps to Design an Algorithm
+Steps to Design an Algorithm ------------------------------
 
 1. Understand the Problem
    Know what needs to be solved.
@@ -78,7 +78,7 @@ Steps to Design an Algorithm
 
 Example: Largest of Three Numbers
 
-Problem
+Problem ------------------------------
 Find the largest among three numbers.
 
 Inputs
@@ -117,7 +117,7 @@ print("Largest number:", largest)
 Output
 Largest number: 25
 
-Advantages of Algorithms
+Advantages of Algorithms ------------------------------
 | Advantage              | Explanation                     |
 | ---------------------- | ------------------------------- |
 | Easy to understand     | Step-by-step process            |
@@ -125,13 +125,42 @@ Advantages of Algorithms
 | Saves development time | Clear planning before coding    |
 | Easier debugging       | Errors can be identified easily |
 
-Disadvantages of Algorithms
+Disadvantages of Algorithms ------------------------------
 | Disadvantage               | Explanation                       |
 | -------------------------- | --------------------------------- |
 | Time-consuming             | Writing detailed steps takes time |
 | Complex for large problems | Large algorithms become difficult |
 
-Important Point
+Important Point ------------------------------
 
 Every program starts with an algorithm.
 Algorithm → Flowchart/Pseudocode → Program → Output
+
+Time Complexity: O(1)
+
+The algorithm performs a fixed number of comparisons, regardless of the input values, so the execution time is constant.
+Auxiliary Space: O(1)
+
+Only a fixed number of variables are used (num1, num2, num3, largest), so memory usage is constant.
+Note:
+
+A problem can have multiple algorithmic solutions.
+For example, finding the largest of three numbers can be done using:
+     * Nested if-else comparisons (as shown)
+     * Python’s max() function (largest = max(num1, num2, num3))
+     * Ternary operators or conditional expressions
+     * Sorting the numbers and picking the last element
+     * The method chosen depends on readability, simplicity, or performance considerations.
+
+How to Analyze an Algorithm----------------------
+To determine if an algorithm is efficient, its performance is analyzed in two ways:
+
+Priori Analysis (Before Implementation):
+   * Evaluates the algorithm theoretically, without running it.
+   * Assumes factors like processor speed are constant.
+   * Provides an approximate measure of time and space complexity.
+
+Posterior Analysis (After Implementation):
+   * Evaluates the algorithm practically, by executing it.
+   * Measures real performance: correctness, time taken, and memory used.
+   * Dependent on hardware and compiler.
