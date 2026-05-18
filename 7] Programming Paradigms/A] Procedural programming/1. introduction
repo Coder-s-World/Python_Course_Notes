@@ -1,0 +1,32 @@
+
+Procedural programming is a programming paradigm that structures code into distinct procedures or functions, each designed to perform a specific task. This approach organizes code as a sequence of step-by-step instructions, making it easier to understand, maintain, and reuse. By encapsulating repetitive logic within functions that accept parameters, procedural programming adheres to the DRY (Don't Repeat Yourself) principle, reducing code duplication and enhancing efficiency. For example, instead of writing separate code blocks to add different pairs of numbers, a single function can be created to accept any two numbers as inputs and return their sum, promoting reusability.
+
+While procedural programming is accessible for beginners and facilitates clear task-oriented code organization, it has limitations. It can become challenging to maintain and extend as applications grow in complexity, and it may not naturally model real-world entities since data is often exposed globally across the program. Despite these drawbacks, procedural programming remains a foundational paradigm that supports the development of more advanced models like object-oriented programming.
+
+Main Features of Procedural Programming
+
+| Feature                     | Explanation                                   |
+| --------------------------- | --------------------------------------------- |
+| Step-by-step execution      | Instructions run one after another            |
+| Use of functions/procedures | Large programs are divided into smaller parts |
+| Reusability                 | Functions can be reused many times            |
+| Structured programming      | Makes code organized and easier to understand |
+| Uses variables and loops    | Helps in storing data and repeating tasks     |
+
+
+Advantages 
+
+| Advantage          | Explanation                          |
+| ------------------ | ------------------------------------ |
+| Simple to learn    | Easy for beginners                   |
+| Easy debugging     | Errors can be found easily           |
+| Code reuse         | Functions reduce repetition          |
+| Faster development | Programs can be built systematically |
+
+Disadvantage
+
+| Disadvantage                  | Explanation                              |
+| ----------------------------- | ---------------------------------------- |
+| Less secure                   | Data is usually globally accessible      |
+| Hard for very large projects  | Managing huge programs becomes difficult |
+| No real-world object modeling | Unlike Object-Oriented Programming       |
