@@ -1,0 +1,19 @@
+* Object-Oriented Programming (OOP) is a way of organizing your code. It lets you create programs that are easy to understand and manage. In Python, OOP uses           "objects" to represent real-world things or ideas. These objects combine data and the actions that can be performed on that data.
+* Using OOP helps you write code that is reusable and flexible. You can build complex systems by breaking them into smaller, manageable parts. This makes your          programs easier to update and fix over time.
+* Object-Oriented Programming (OOP) is a programming method where programs are built using objects and classes.
+* Instead of writing everything as separate instructions, OOP organizes code into reusable components.
+
+Python supports OOP to make programs:
+
+    More organized
+    Reusable
+    Easy to maintain
+    Easy to expand
+
+Here are the main concepts in Python OOP:
+    Classes
+    Objects
+    Inheritance
+    Encapsulation
+    Polymorphism
+    Abstraction
