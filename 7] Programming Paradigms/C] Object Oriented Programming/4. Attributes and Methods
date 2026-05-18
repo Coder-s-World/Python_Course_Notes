@@ -1,0 +1,304 @@
+Attributes and Methods in Python
+
+In Python OOP, classes and objects contain two important things:
+
+Attributes → Data or properties
+Methods → Actions or behaviors
+
+1. Attributes in Python
+Definition
+
+Attributes are variables inside a class or object.
+They store information related to the object.
+
+Real-Life Example
+
+Car Object
+| Attribute | Value |
+| --------- | ----- |
+| Brand     | BMW   |
+| Color     | Black |
+| Speed     | 200   |
+These properties are attributes.
+
+Types of Attributes
+| Type               | Meaning               |
+| ------------------ | --------------------- |
+| Instance Attribute | Belongs to object     |
+| Class Attribute    | Shared by all objects |
+
+A) Instance Attributes
+
+Instance attributes are created separately for each object.
+Usually defined inside:
+  __init__()
+
+Example
+class Student:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+s1 = Student("Rahul", 20)
+
+print(s1.name)
+print(s1.age)
+
+Explanation
+
+Part	Meaning
+| Part      | Meaning            |
+| --------- | ------------------ |
+| self.name | Instance attribute |
+| self.age  | Instance attribute |
+| Rahul     | Value of name      |
+| 20        | Value of age       |
+
+
+Each object gets its own values.
+
+Memory Understanding
+
+If we create:
+
+s1 = Student("Rahul", 20)
+s2 = Student("Aman", 22)
+
+Then:
+
+| Object | Attributes |
+| ------ | ---------- |
+| s1     | Rahul, 20  |
+| s2     | Aman, 22   |
+
+
+Both objects store separate data.
+
+B) Class Attributes
+
+Class attributes are shared by all objects.
+Defined directly inside class.
+
+Example
+class Student:
+
+    school = "ABC School"
+
+    def __init__(self, name):
+        self.name = name
+
+s1 = Student("Rahul")
+s2 = Student("Aman")
+
+print(s1.school)
+print(s2.school)
+Explanation
+
+school belongs to class, not individual object.
+
+All objects use same value.
+
+Difference Between Instance and Class Attributes
+| Instance Attribute     | Class Attribute           |
+| ---------------------- | ------------------------- |
+| Unique for each object | Shared by all objects     |
+| Defined in constructor | Defined directly in class |
+| Uses `self`            | No `self` needed          |
+| Separate memory        | Common memory             |
+
+Accessing Attributes
+
+Syntax
+object.attribute
+
+Example
+print(s1.name)
+
+Modifying Attributes
+s1.name = "Amit"
+Attribute value changes.
+
+Deleting Attributes
+del s1.name
+
+Deletes attribute from object.
+
+Built-in Attribute Functions
+| Function  | Purpose                |
+| --------- | ---------------------- |
+| getattr() | Get attribute value    |
+| setattr() | Set attribute value    |
+| hasattr() | Check attribute exists |
+| delattr() | Delete attribute       |
+
+Example
+print(hasattr(s1, "name"))
+
+2. Methods in Python
+Definition
+
+Methods are functions inside a class.
+They define object behavior.
+
+Real-Life Example
+Car
+| Method       | Action          |
+| ------------ | --------------- |
+| start()      | Starts car      |
+| stop()       | Stops car       |
+| accelerate() | Increases speed |
+
+Syntax of Method
+class Demo:
+
+    def method_name(self):
+        pass
+
+Example of Method
+class Student:
+
+    def show(self):
+        print("Hello Student")
+
+s1 = Student()
+
+s1.show()
+
+Understanding self ------
+
+self refers to current object.
+It helps access:
+  Attributes
+  Other methods
+inside class.
+
+Types of Methods
+| Type            | Explanation                |
+| --------------- | -------------------------- |
+| Instance Method | Works with object data     |
+| Class Method    | Works with class data      |
+| Static Method   | Independent utility method |
+
+A) Instance Method
+
+Most common method type.
+
+Uses:
+
+self
+Object attributes
+Example
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print(self.name)
+
+B) Class Method
+Works with class attributes.
+
+Uses decorator:
+@classmethod
+
+Uses cls instead of self.
+
+Example
+class Student:
+
+    school = "ABC"
+
+    @classmethod
+    def show_school(cls):
+        print(cls.school)
+
+C) Static Method
+
+Independent method.
+Does not use:
+  self
+  cls
+
+Uses decorator:
+@staticmethod
+
+Example
+class Math:
+
+    @staticmethod
+    def add(a, b):
+        print(a + b)
+
+Difference Between Methods
+| Method Type     | Uses                 |
+| --------------- | -------------------- |
+| Instance Method | Object data          |
+| Class Method    | Class data           |
+| Static Method   | General utility work |
+
+Calling Methods
+Syntax
+object.method()
+
+Example
+s1.display()
+
+Complete Example
+class Employee:
+
+    company = "TCS"
+
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def show(self):
+        print(self.name)
+        print(self.salary)
+
+    @classmethod
+    def company_name(cls):
+        print(cls.company)
+
+    @staticmethod
+    def greet():
+        print("Welcome")
+
+e1 = Employee("Rahul", 50000)
+
+e1.show()
+
+Employee.company_name()
+
+Employee.greet()
+
+Output
+Rahul
+50000
+TCS
+Welcome
+
+Important Difference Between Attributes and Methods
+| Attributes           | Methods                    |
+| -------------------- | -------------------------- |
+| Store data           | Perform actions            |
+| Variables            | Functions                  |
+| Represent properties | Represent behavior         |
+| Example: name, age   | Example: display(), show() |
+
+
+Important Points to Remember
+| Point                          | Explanation                   |
+| ------------------------------ | ----------------------------- |
+| Attributes store object data   | Methods define behavior       |
+| `self` accesses current object | Important in instance methods |
+| Class attributes shared by all | Instance attributes unique    |
+| Methods can access attributes  | Through self                  |
+
+Short Summary
+
+Attributes are variables that store object data.
+Methods are functions that define object behavior.
+Together, they form the foundation of OOP in Python.
