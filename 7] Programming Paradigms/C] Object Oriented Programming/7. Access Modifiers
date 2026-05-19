@@ -1,0 +1,141 @@
+Access Modifiers in Python : Public, Private and Protected
+
+Access modifiers in Python control which parts of a class can be accessed from outside the class, from within the class, or by subclasses. They help control how data and methods are accessed and used.
+
+Types of Access Modifiers
+
+1. Public Access Modifier
+Members (variables or methods) declared as public can be accessed from anywhere in the program.
+By default, all members are public in Python.
+
+class Geek:
+    def __init__(self, name, age):
+        self.pythonName = name      
+        self.pythonAge = age        
+    def displayAge(self):        
+        print("Age:", self.pythonAge)
+​
+obj = python("R2J", 20)
+​
+print("Name:", obj.pythonName)
+obj.displayAge()
+
+Output
+Name: R2J
+Age: 20
+Explanation:
+
+geekName and geekAge are public variables, so they can be accessed directly from outside the class (obj.geekName).
+displayAge() is a public method, so it can be called normally using obj.displayAge().
+In Python, class members are public by default, so both the variables and the methods will appear when you check dir(obj).
+
+2. Protected Access Modifier
+A member is considered protected if its name starts with a single underscore (_).
+Convention only: It suggests that the member should not be accessed outside the class except by subclasses.
+Still, Python allows direct access if explicitly called.
+
+
+
+class Student:
+    def __init__(self, name, roll, branch):
+        self._name = name            
+        self._roll = roll           
+        self._branch = branch       
+​
+    def _displayRollAndBranch(self): 
+        print("Roll:", self._roll)
+        print("Branch:", self._branch)
+​
+​
+class Geek(Student):
+    def displayDetails(self):
+        print("Name:", self._name)  
+        self._displayRollAndBranch() 
+​
+​
+obj = Geek("R2J", 1706256, "IT")
+obj.displayDetails()
+
+Output
+Name: R2J
+Roll: 1706256
+Branch: IT
+Explanation:
+
+_name, _roll, and _branch are protected members, meant to be used within the class and subclasses.
+_displayRollAndBranch() is a protected method, accessed by the subclass Geek.
+Python allows direct access (e.g., obj._name), but by convention, it’s avoided.
+
+3. Private Access Modifier
+A member is private if its name starts with double underscores (__).
+Python does not enforce strict privacy — instead, it uses Name Mangling.
+The interpreter renames __var to _ClassName__var internally.
+Note: A name like __age__ (double underscores at both start and end) is not private. It is treated as a special 'dunder' name in Python and name mangling does not apply to it.
+
+class hello:
+    def __init__(self, name, roll, branch):
+        self.__name = name         
+        self.__roll = roll          
+        self.__branch = branch     
+​
+    def __displayDetails(self):     
+        print("Name:", self.__name)
+        print("Roll:", self.__roll)
+        print("Branch:", self.__branch)
+​
+    def accessPrivateFunction(self):
+        self.__displayDetails()    
+​
+​
+obj = hello("R2J", 1706256, "CSE")
+obj.accessPrivateFunction()
+print(obj._hello__name)
+
+Output
+Name: R2J
+Roll: 1706256
+Branch: CSE
+R2J
+Explanation:
+
+__name, __roll, __branch: private variables
+__displayDetails(): private method
+Direct access from outside will raise AttributeError
+Access allowed inside the class or via name mangling (obj._Geek__name)
+Using All Access Modifiers
+This program shows public, protected and private members in one example. It demonstrates how each type is accessed inside the class, in a subclass and from outside the class.
+
+
+
+
+class Super:
+    publicData = "Public Data Member"
+    _protectedData = "Protected Data Member"
+    __privateData = "Private Data Member"
+​
+    def accessPrivateMembers(self):
+        print("Accessing inside class:", self.__privateData)
+​
+​
+class Sub(Super):
+    def accessProtectedMembers(self):
+        print("Accessing inside subclass:", self._protectedData)
+​
+obj = Sub()
+​
+print(obj.publicData)
+print(obj._protectedData)
+obj.accessPrivateMembers()
+print(obj._Super__privateData)
+
+Output
+Public Data Member
+Protected Data Member
+Accessing inside class: Private Data Member
+Private Data Member
+Explanation:
+
+publicData is accessed directly using obj.publicData.
+_protectedData is accessed using obj._protectedData (allowed but discouraged by convention).
+__privateData is accessed inside the class using self.__privateData.
+Outside the class, private data is accessed using name mangling: obj._Super__privateData.
