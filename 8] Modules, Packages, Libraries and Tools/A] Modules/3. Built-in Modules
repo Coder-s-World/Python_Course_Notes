@@ -1,1 +1,82 @@
+Python built-in modules are a set of libraries that come pre-installed with the Python installation. It will become a tedious task to install any required modules in between the process of development that's why Python comes with some most used modules required. These modules provide a wide range of functionalities, from file operations and system-related tasks to mathematical computations and web services
 
+-------------
+We can run the below command to get the all available modules in Python:
+
+
+help('modules')
+--------------
+
+A built-in module in Python is a module that already comes with Python.
+You do not need to install it separately.
+
+These modules provide ready-made functions for different tasks like math, dates, random numbers, file handling, etc.
+
+Example
+
+import math
+
+print(math.sqrt(25))
+
+Output:
+
+5.0
+
+Here, math is a built-in module.
+
+
+---
+
+Some Common Built-in Modules
+
+Module	Use
+
+math	Mathematical operations
+random	Generate random numbers
+datetime	Work with date and time
+os	Work with operating system
+sys	System-related functions
+statistics	Statistical calculations
+
+
+
+---
+
+More Examples
+
+Random Module
+
+import random
+
+print(random.randint(1, 10))
+
+Gives a random number between 1 and 10.
+
+
+---
+
+Datetime Module
+
+import datetime
+
+print(datetime.datetime.now())
+
+Shows current date and time.
+
+
+---
+
+OS Module
+
+import os
+
+print(os.getcwd())
+
+Shows current working folder.
+
+
+---
+
+So in simple words:
+
+> A built-in module is a pre-written Python file already available in Python that helps perform common tasks easily.
