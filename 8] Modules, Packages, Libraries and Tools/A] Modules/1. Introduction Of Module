@@ -16,3 +16,70 @@ Organize code into separate files
 Reuse code
 Avoid writing the same code repeatedly
 Keep programs clean and manageable
+
+Types of Modules
+Python provides several kinds of modules. Each type plays a different role in application development.
+
+1. Built-in Modules: These come bundled with Python and require no installation - e.g., math, random, os.
+
+
+
+
+import random
+print(random.randint(1, 5))
+
+Output
+4
+Explanation: random.randint() returns a random number within the given range.
+
+2. User-Defined Modules: These are modules you create yourself, such as calc.py.
+
+
+
+
+import calc
+print(calc.subtract(20, 5))
+Output
+
+15
+
+Explanation: The module is created manually and then imported into another script.
+
+3. External (Third-Party) Modules: These modules are installed using pip - e.g., NumPy, Pandas, Requests.
+
+
+import requests
+r = requests.get("https://example.com")
+print(r.status_code)
+Output
+
+200
+
+Explanation: requests is installed separately (pip install requests) and provides HTTP utilities.
+
+4. Package Modules: A package is a directory containing multiple modules, usually with an __init__.py file.
+
+Example Directory
+
+mypkg/
+    __init__.py
+    calc.py
+    utils.py
+
+Using a module from a package
+
+
+
+
+from mypkg import utils
+print(utils.some_func())
+calls a function named some_func(), the output will be whatever that function returns.
+
+If utils.py contains something like:
+
+
+def some_func():
+    return "Hello"
+Output
+
+Hello
