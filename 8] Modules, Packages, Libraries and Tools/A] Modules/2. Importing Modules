@@ -1,1 +1,61 @@
+Create a Module
+To import a module it is necessary to create a module, write the desired code and save that in a file with .py extension.
 
+Example: Let's create a calc.py in which we define two functions, one add and another subtract.
+
+# calc.py
+def add(x, y):
+    return (x+y)
+
+def subtract(x, y):
+    return (x-y)
+This is all that is required to create a module.
+
+Import module
+Modules can be used in another file using the import statement. When Python sees an import, it loads the module if it exists in the interpreter’s search path. Below is the syntax to import a module:
+
+import module
+
+Example: Here, we are importing the calc that we created earlier to perform add operation.
+
+
+import calc
+print(calc.add(10, 2))
+Output
+
+12
+
+Explanation: import calc loads the module and calc.add() accesses a function through dot notation.
+
+Types of Import Statements
+
+1. Import From Module: This allows importing specific functions, classes, or variables rather than the whole module.
+
+from math import sqrt, factorial
+print(sqrt(16))
+print(factorial(6))
+
+Output
+4.0
+720
+Explanation: Only sqrt and factorial are brought into the local namespace, so the prefix math. is not required.
+
+2. Import All Names: * imports everything from a module into the current namespace.
+
+from math import *
+print(sqrt(16))
+print(factorial(6))
+
+Output
+4.0
+720
+Explanation: Every public name of math becomes directly accessible. (Not recommended in large projects due to namespace conflicts.)
+
+3. Import With Alias: You can shorten a module's name using as.
+
+import math as m
+print(m.pi)
+
+Output
+3.141592653589793
+Explanation: math is accessed through the shorter alias m.
