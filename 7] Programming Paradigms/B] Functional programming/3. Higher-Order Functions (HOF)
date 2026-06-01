@@ -1,0 +1,74 @@
+Higher-Order Function (HOF) in Python
+
+A Higher-Order Function (HOF) is a function that:
+    * Takes another function as an argument, or
+    * Returns a function as a result, or
+    * Does both
+
+In simple words:
+A Higher-Order Function is a function that works with other functions.
+
+Example 1: Function Passed as Argument
+def greet():
+    return "Hello"
+
+def display(func):
+    print(func())
+display(greet)
+
+Output
+Hello
+
+Here:
+greet is passed as an argument to display.
+Therefore, display is a Higher-Order Function.
+
+Example 2: Function Returning Another Function
+def outer():
+    def inner():
+        return "Welcome"
+    return inner
+result = outer()
+print(result())
+
+Output
+Welcome
+
+Here:
+outer() returns the function inner.
+Therefore, outer is a Higher-Order Function.
+
+Example 3: Built-in Higher-Order Function map()
+numbers = [1, 2, 3, 4]
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+
+Output
+[2, 4, 6, 8]
+map() is a Higher-Order Function because it accepts another function (lambda) as an argument.
+
+Common Higher-Order Functions in Python
+
+| Function   | Purpose                             |
+| ---------- | ----------------------------------- |
+| `map()`    | Apply a function to every item      |
+| `filter()` | Filter items based on a condition   |
+| `reduce()` | Reduce a sequence to a single value |
+| `sorted()` | Sort using a custom function        |
+| `max()`    | Find maximum using a key function   |
+| `min()`    | Find minimum using a key function   |
+
+Real-Life Analogy
+
+Imagine a manager in a company:
+
+The manager doesn't do all tasks directly.
+The manager assigns tasks to employees.
+
+Similarly:
+
+A Higher-Order Function doesn't perform all work itself.
+It uses other functions to perform specific tasks.
+Quick Definition
+
+A Higher-Order Function is a function that accepts another function as an argument, returns a function, or both.
