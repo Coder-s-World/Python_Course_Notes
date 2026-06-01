@@ -1,0 +1,293 @@
+Time Complexity: A Simple Explanation
+
+Time complexity is a way to measure how the time it takes for a computer program or algorithm to run changes as the size of the input grows. 
+🍔 Real-Life Example
+Imagine making sandwiches:
+| Number of Sandwiches | Time Required |
+| -------------------- | ------------- |
+| 1                    | 5 minutes     |
+| 2                    | 10 minutes    |
+| 10                   | 50 minutes    |
+
+As the number of sandwiches increases, the time increases too.
+
+Similarly, in programming, the more data an algorithm processes, the more time it may take to run.
+
+📋 Example
+
+Suppose you have a list of names and need to find a specific one.
+
+Small list ➜ Fast search
+Large list ➜ Slower search
+
+Time Complexity helps us understand how performance changes as data grows.
+
+Why It Matters?
+
+✅ Faster programs
+✅ Better performance
+✅ Less resource usage
+✅ Easier scaling for large applications
+
+
+For example, if you have a list of names and you want to find one specific name, the time it takes depends on how many names are in the list. If the list is small, it’s quick; if it’s huge, it takes longer. Time complexity uses simple terms like "linear" (time grows directly with input size) or "constant" (time stays the same no matter the input size) to describe this. It helps programmers write efficient code that runs faster and saves resources.
+
+Understanding Algorithm Efficiency: A Beginner's Guide
+
+When you write code, one important thing to think about is how fast it runs and how much memory it uses. Imagine you have a big box of books, and you want to find a specific one. If you look at each book one by one, it might take a long time if the box is huge. But if the books are sorted and you split the box in half each time to check where the book might be, you find it much faster. This idea is similar to how algorithms work and how we measure their efficiency.
+
+There are different types of time it takes for algorithms to run:
+- Constant time means it takes the same amount of time no matter how big the input is, like grabbing a book from a labeled shelf.
+- Linear time means the time grows with the size of the input, like checking each book one by one.
+- Logarithmic time is faster because it cuts the search area in half each time, like splitting the box of books.
+- Quadratic time means the time grows with the square of the input size, like checking pairs of books.
+- Exponential time means the time doubles with each step, which can get very slow quickly.
+
+Knowing these helps you write better code that runs faster and uses memory wisely. Would you like me to explain any of these types in more detail?
+
+The Big O Notation - An Introduction
+
+A long time ago, before the emergence of 10x engineers, software engineers sought ways to solve real-world problems with their programming skills. Different engineers came up with different solutions/algorithms to solve these problems. There was a need to compare these solutions based on their complexity and efficiency. This need gave birth to the Big O notation. What is the Big O notation then?
+
+What is the Big O notation?
+* Big O notation is used in computer science to describe the performance or complexity of an algorithm.
+* Algorithms are to computer programs what recipes are to dishes. Different recipes can help you to make a particular meal but they don't always yield the same      results. They don't always have the same steps, ingredients nor take the same amount of time to follow. Some recipes are faster and produce better results than    others.
+* In the same way, different algorithms can achieve a particular computer program. However, they are not all equally efficient or take the same amount of time to    run. We use Big O to measure the efficiency of an algorithm.
+* For example, let's consider sorting. There are many sorting algorithms e.g. mergeSort, bubble sort, quicksort, and insertion sort. How do you know which is more   efficient or less complex? This is why the Big O notation exists.
+
+You might wonder, why do we need a notation? Why don't we just consider the time it takes to run the algorithm? Here are two of many reasons:
+
+    1️⃣. Different computers have different processors and thus some computers will spend less time running an algorithm than others.
+    2️⃣. Some programming languages are faster than others.
+
+It will be stressful taking all these factors into consideration when trying to analyze an algorithm. Rather than do that, the Big O notation uses something more standard - the input. It considers how the runtime of the algorithm grows in relation to the size of the input. It is also good to note that the Big O notation considers the worst-case scenario for its analysis.
+
+Hopefully, you get the sense of it now. Next question that might come to your mind is "Why should I know this?"
+
+******************** Why should you care? ******************************
+        For a small app that processes little data, such analysis might be unnecessary. This is because the difference in the runtime of algorithms might have         little impact on your app. For large applications that manipulate a large amount of data, this analysis is crucial. Because inefficient algorithms             will create a significant impact on the processing time. With a good knowledge of Big-O notation, you can design algorithms for efficiency. Thus,              you'll build apps that scale and save yourself a lot of potential headaches.
+
+        For your coding interviews. Yeah, you heard me right. You are likely to get asked by an interviewer the runtime complexity of your solution. So it's           good to have an understanding of the Big O notation.
+
+Let look at some common examples of Big O Notation
+
+Big-O Complexity Growth
+
+Operations
+    ^
+    |
+    |                              O(n!)
+    |                            /
+    |                          /
+    |                        / O(2^n)
+    |                      /
+    |                    /
+    |                 O(n²)
+    |               /
+    |             /
+    |          O(n log n)
+    |         /
+    |       /
+    |     O(n)
+    |    /
+    |  /
+    | O(log n)
+    | O(1)
+    +------------------------------------------------> Input Size (n)
+
+🟩 Excellent  : O(1), O(log n)
+🟨 Good       : O(n)
+🟨 Fair       : O(n log n)
+🟧 Bad        : O(n²)
+🟥 Horrible   : O(2ⁿ), O(n!)
+
+
+**************************** Common Runtime Complexities *****************************************
+
+          ************* 1️⃣. O(1) - Constant Runtime *****************
+          In this case, your algorithm runs the same time, regardless of the given input data set.
+          
+          An example of this is returning the first element in the given data like in the example below.
+          
+          function returnFirst(elements) {
+             return elements[0]
+          }
+          
+          The runtime is constant no matter the size of the input given.
+          
+          **************** 2️⃣. O(n) - Linear Runtime ********************
+          Linear runtime occurs when the runtime grows in proportion with the size of the input data set. n is the size of the input data set.
+          
+          A good example of this is searching for a particular value in a data set using an iteration like in the example below.
+          
+          function constainsValue(elements, value) {
+            for (let element in elements) {
+              if (element === value) return true;
+            }
+            return false
+          }
+          We see that the time taken to loop through all elements in the array grows with an increase in the size of the array. But what if the element is               found before it reaches the last element in the array? Does the runtime complexity change?
+          
+          Remember that the Big O notation considers the worst-case scenario. In this instance, it's the case where the loops run through all elements in the                array. So that is what determines the runtime complexity of the algorithm.
+          
+          ****************** 3️⃣. O(n^2 ) - Quadratic Runtime *****************************
+          O(n^2 ) denotes an algorithm whose runtime is directly proportional to the square of the size of the input data set.
+          An example of this is a nested iteration or loop to check if the data set contains duplicates.
+          
+          function constainsDuplicate(elements) {
+            for (let element in elements) {
+               for (let item in elements){
+                 if (element === item) return true;
+               }
+            }
+            return false
+          }
+          Deeper nested iterations will produce runtime complexities of O(n^3 ), O(n^4 ) etc
+          
+          ********************** 4️⃣. O(log n) - Logarithmic runtime ******************************
+          In this case, the runtime it takes for the algorithm to run will plateau no matter the size of the input data set.
+          
+          A common example of this is a search algorithm like the binary search. The idea of a binary search is not to work with the entire data. Rather,                reduce the amount of work done by half with each iteration. The number of operations required to arrive at the desired result will be log base 2 of            the input size.
+          
+          For further information on this runtime complexity, you can check some of the resources at the end of the article.
+          
+          ******************  5️⃣. O(n log n) - Linearithmic runtime  ***************************
+          Here, the runtime of the algorithm depends on running a logarithm operation n times.
+          Most sorting algorithms have a runtime complexity of O(n log n)
+          
+          *********************** 6️⃣. O(2^n ) - Exponential runtime *********************
+          This occurs in algorithms where for each increase in the size of the data set, the runtime is doubled. For a small data set, this might not look               bad. But as the size of the data increase, the time taken to execute this algorithm increases rapidly.
+          
+          A common example of this is a recursive solution for finding Fibonacci numbers.
+          
+                function fibonacci(num) {
+                if (num <= 1) return 1;
+          
+                return fibonacci(num - 2) + fibonacci(num - 1)
+             } 
+          
+          *********************  7️⃣. O(n!) - Factorial runtime  ****************************
+          
+          In this case, the algorithm runs in factorial time. The factorial of a non-negative integer (n!) is the product of all positive integers less than             or equal to n. This is a pretty terrible runtime.
+          Any algorithm that performs permutation on a given data set is an example of O(n!)
+
+
+----------------------------------------------------------------------------
+1️⃣ Constant Time
+Dictionary Lookup
+drinks = {
+    1: "Coffee",
+    2: "Tea",
+    3: "Juice"
+}
+
+print(drinks[2])
+Output
+Tea
+
+Complexity:
+
+O(1)
+
+2️⃣ Linear Time
+Simple Loop
+for x in range(100):
+    print(x)
+
+Complexity:
+
+O(n)
+More items ➜ More iterations.
+
+3️⃣ Logarithmic Time
+----------- Linear Search
+def find_num(num):
+    count = 0
+
+    for x in range(100):
+        if x == num:
+            print("Total Iterations:", count)
+            return x
+
+        count += 1
+
+Finding 97:
+
+Iterations = 96
+
+----------- Binary Search
+def find_number_log(target):
+    iterations = 0
+
+    x = range(100)
+
+    left = 0
+    right = len(x) - 1
+
+    while left <= right:
+
+        iterations += 1
+
+        middle = (left + right) // 2
+        isNumber = x[middle]
+
+        if target == isNumber:
+            print("Iterations", iterations)
+            return middle
+
+        elif target < isNumber:
+            right = middle - 1
+
+        else:
+            left = middle + 1
+
+    return -1
+
+Finding 97:
+
+Middle 49 → 0-99
+Middle 74 → 50-99
+Middle 87 → 75-99
+Middle 93 → 88-99
+Middle 96 → 94-99
+Middle 98 → 97-99
+Middle 97 → 97-97
+
+Total:
+
+Only 7 iterations
+
+instead of
+
+96 iterations
+
+4️⃣ Quadratic Time
+for x in range(10):
+    for y in range(10):
+        print(x, y)
+
+Visualization:
+
+Outer Loop  → 10 iterations
+Inner Loop  → 10 iterations
+
+Total Work  → 10 × 10 = 100
+
+Complexity:
+
+O(n²)
+
+5️⃣ Exponential Time
+Recursive Fibonacci
+def fibonacci(n):
+
+    if n <= 1:
+        return n
+
+    return fibonacci(n-1) + fibonacci(n-2)
+
+Complexity:
+
+O(2ⁿ)
+
+Each call creates two more calls, causing rapid growth.
