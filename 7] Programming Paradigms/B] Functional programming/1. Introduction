@@ -1,0 +1,24 @@
+Functional Programming: A Simple Explanation
+
+Functional programming is a way of writing code that focuses on using functions to do tasks. Think of a function like a little machine: you give it some input, it does something with that input, and then it gives you an output. The special thing about functional programming is that these functions always behave the same way—they don’t change anything outside themselves, and they don’t rely on anything that might change. This makes the code easier to understand and less likely to have bugs.
+
+​​functional programming in essence is a programming paradigm ​that utilizes functions for clean, consistent and maintainable code.
+
+Functional programming does not change the data outside the scope of the function. ​This simply means that the function should avoid modifying the input data or ​arguments being passed, instead it should only return the completed result of ​the intended function being called. ​Functions are considered standalone or independent and this aids the clean and ​elegant nature of the code. ​In fact, many of the strongly typed object orientated languages have incorporated ​function programming into their structure, ​in order to support functional programming. 
+
+Imagine you have a magic recipe book. Every time you follow a recipe (function) with the same ingredients (input), you get the exact same delicious dish (output). You never change the ingredients themselves, just use them to make something new. In Python, functions are like these recipes—you can even pass them around or use them inside other functions. For example, Python has a built-in function called sorted that takes a list and returns a new list with the items in order, without changing the original list. This way of programming helps keep your code clean, neat, and easy to reuse.
+
+It's particularly adept at processing large amounts of data at high speeds
+
+functions take some input, ​process it and then produce some outputs. ​There are two types of functions traditional and pure, , ​pure functions will always do the same thing and ​return the same results no matter how many times they are called.
+
+​There are several differences between traditional and pure, so let's list them. ​Traditional functions can access and modify variables on the global state, ​but pure functions cannot, both traditional functions and ​pure functions can access variables in the local state. 
+​Traditional functions can change args, whereas pure functions cannot, and ​lastly, the outputs of traditional functions does not depend on inputs. ​However, the output of pure functions does depend on input, 
+
+The language itself needs to allow function to be passed as an argument and ​also return a function to its caller. ​In python functions are what is known as first class citizens, ​which essentially means they have the same level of strings and numbers, ​they can be assigned to a variable, passed as an argument or returned to its caller. 
+​Let's explore a few examples of functions available in python, take for ​instance the sorted function, the sorted function accepts a list of items and ​then returns that list in a sorted order. ​You can use sorted function to list items in alphabetical order, ​by passing a list of coffees to the sorted function, ​the return sorts the list in alphabetical order. 
+
+​The great thing about functional programming is that the logic behind ​certain tasks is already built in for you, functions are reusable and ​thus save a lot of development time. ​But did you know that you can also create your own functions specific to your own ​requirements, let's look at a simple example, ​imagine you want to to spell the names of the coffees backwards. ​This might not be entirely useful but it's a good showcase of functional, ​you can create your own simple reverse function to do this, ​define the function, let's call it reverse and assign the variable str to it. 
+
+​Now return the value of str with a slice function, you'll learn more about ​the slice function later in the lesson, then a sign of variable. ​To get the results of the map function, the map function accepts as its first ​argument, the reverse function and then the iterable coffees. ​It will then automatically handle the iterations to go through each coffee and ​apply the reverse function to it. ​In this video, you have learned what functional programming is and ​you were introduced to examples of built in functions in python. 
+
