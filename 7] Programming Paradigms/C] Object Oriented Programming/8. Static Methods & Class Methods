@@ -1,3 +1,22 @@
+Time Complexity: A Simple Explanation
+
+Time complexity is a way to measure how the time it takes for a computer program or algorithm to run changes as the size of the input grows. Imagine you have a recipe that takes 5 minutes to make a sandwich. If you want to make 2 sandwiches, it might take about 10 minutes, and for 10 sandwiches, about 50 minutes. Time complexity helps us understand this kind of relationship but for computer programs.
+
+For example, if you have a list of names and you want to find one specific name, the time it takes depends on how many names are in the list. If the list is small, it’s quick; if it’s huge, it takes longer. Time complexity uses simple terms like "linear" (time grows directly with input size) or "constant" (time stays the same no matter the input size) to describe this. It helps programmers write efficient code that runs faster and saves resources.
+
+Understanding Algorithm Efficiency: A Beginner's Guide
+
+When you write code, one important thing to think about is how fast it runs and how much memory it uses. Imagine you have a big box of books, and you want to find a specific one. If you look at each book one by one, it might take a long time if the box is huge. But if the books are sorted and you split the box in half each time to check where the book might be, you find it much faster. This idea is similar to how algorithms work and how we measure their efficiency.
+
+There are different types of time it takes for algorithms to run:
+- Constant time means it takes the same amount of time no matter how big the input is, like grabbing a book from a labeled shelf.
+- Linear time means the time grows with the size of the input, like checking each book one by one.
+- Logarithmic time is faster because it cuts the search area in half each time, like splitting the box of books.
+- Quadratic time means the time grows with the square of the input size, like checking pairs of books.
+- Exponential time means the time doubles with each step, which can get very slow quickly.
+
+Knowing these helps you write better code that runs faster and uses memory wisely. Would you like me to explain any of these types in more detail?
+
 The Big O Notation - An Introduction
 
 A long time ago, before the emergence of 10x engineers, software engineers sought ways to solve real-world problems with their programming skills. Different engineers came up with different solutions/algorithms to solve these problems. There was a need to compare these solutions based on their complexity and efficiency. This need gave birth to the Big O notation. What is the Big O notation then?
@@ -23,6 +42,37 @@ Hopefully, you get the sense of it now. Next question that might come to your mi
         For your coding interviews. Yeah, you heard me right. You are likely to get asked by an interviewer the runtime complexity of your solution. So it's good          to have an understanding of the Big O notation.
 
 Let look at some common examples of Big O Notation
+
+Big-O Complexity Growth
+
+Operations
+    ^
+    |
+    |                              O(n!)
+    |                            /
+    |                          /
+    |                        / O(2^n)
+    |                      /
+    |                    /
+    |                 O(n²)
+    |               /
+    |             /
+    |          O(n log n)
+    |         /
+    |       /
+    |     O(n)
+    |    /
+    |  /
+    | O(log n)
+    | O(1)
+    +------------------------------------------------> Input Size (n)
+
+🟩 Excellent  : O(1), O(log n)
+🟨 Good       : O(n)
+🟨 Fair       : O(n log n)
+🟧 Bad        : O(n²)
+🟥 Horrible   : O(2ⁿ), O(n!)
+
 
 **************************** Common Runtime Complexities *****************************************
 
@@ -92,3 +142,91 @@ Let look at some common examples of Big O Notation
           
           In this case, the algorithm runs in factorial time. The factorial of a non-negative integer (n!) is the product of all positive integers less than or              equal to n. This is a pretty terrible runtime.
           Any algorithm that performs permutation on a given data set is an example of O(n!)
+
+
+----------------------------------------------------------------------------
+1 : Constant time
+
+Dictionary
+
+    Drinks = {1: 'Coffee', 2: 'Tea', 3: 'Juice'}
+    print(drinks[2])
+    Tea
+
+ 2 : Linear time (Simple Loop)
+
+Linear time
+
+    # the bigger the range, the bigger the running time!
+    For x in range(100):
+        print(x)
+
+3 : Logarithmic time (Headers)
+
+Logarithmic time
+
+        Input         |     Operations
+
+                                                 Linear time
+    def find_num(num):
+        count = 0
+        for x in range(100):
+            if x == num:
+                print("Total Iterations: " + count)
+                return x                                96
+            count += 1
+                                                     Iterations
+    find_num(97)
+
+    #OUTPUT
+    Total Iterations: 96
+
+ Logarithmic time (Binary Search Code)
+
+    def find_number_log(target):                 Logarithmic
+        iterations = 0                              time
+        x = range(100)
+        left = 0
+        right = len(x) - 1
+
+        while left <= right:
+            iterations += 1                             7
+            middle = (left + right) // 2
+            isNumber= x[middle]
+
+        if target == isNumber:                      Iterations
+            print('Iterations', iterations)
+            return middle
+        elif target < isNumber:
+            right = middle - 1
+        else:
+            left = middle + 1
+
+        return -1
+
+    print(find_number_log(97))
+
+   (Split Iterations)
+                                                 Middle 49: 0-99
+    Logarithmic time                             Middle 74: 50-99
+                                                 Middle 87: 75-99
+                                                 Middle 93: 88-99
+                                                 Middle 96: 94-99
+                                                 Middle 98: 97-99
+                                                 Middle 97: 97-97
+4:  Quadratic Time
+
+Quadratic Time
+
+    For x in range(10): ──────────────────────────>   10 iterations
+        for y in range(10): ──────────────────────>   10 iterations
+            print (x, y)
+
+5 : Exponential time
+
+Exponential time
+
+    Def fibonacci(n):
+        if n <= 1:
+            return n
+        return fibonacci(n-1) + fibonacci(n-2)
