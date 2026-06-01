@@ -1,0 +1,65 @@
+A pure function in programming is a function that:
+
+- Always produces the same output for the same input.
+- Does not change or affect any data or variables outside its own scope.
+
+In other words, it doesn’t modify anything outside itself, like global variables or external data. It only uses the input it receives and returns a new result without side effects.
+A good coder will try to keep code clean, ​make it easier to debug, ​and ensure it's extendable. ​The great thing is that ​pure functions can help you do all that
+
+A pure function is a function that does not ​change or have any effect on a variable, ​data, list, or sets beyond its own scope. ​For example, if you have a list with the global scope, ​a pure function cannot add something to ​that list or alter it in any way. ​
+
+few benefits of pure functions. ​Firstly, with pure functions, ​you always know what the outcome will be. ​Pure functions are consistent snippets of ​code that do exactly what they are intended to do. ​Thirdly, pure functions include the ability to ​cache since you know ​the return is always going to be the same. 
+​Lastly, pure functions lend ​themselves well to a multi-threaded program. 
+
+​In multi-threaded programs, ​more than one process can run concurrently, ​which creates many threads of data. ​Pure functions will help prevent changes on ​the global scope ensuring data stays reliable. ​
+
+To convert an impure function to a pure function, you can follow these steps:
+
+- Avoid modifying external or global variables inside the function.
+- Instead of changing the original data (like a list), create a copy of it inside the function.
+- Perform any changes or additions on the copy.
+- Return the new, modified copy without altering the original data.
+
+For example, if a function adds an item to a global list (impure), you can change it to accept the list as a parameter, make a copy of that list, add the item to the copy, and return the new list (pure).
+
+| Pure Function                       | Non-Pure Function               |
+| ----------------------------------- | ------------------------------- |
+| Same input → Same output            | Output may vary                 |
+| No side effects                     | Has side effects                |
+| Doesn't use/change global variables | May use/change global variables |
+| Easy to test                        | Harder to test                  |
+| Predictable                         | Less predictable                |
+
+
+Example : Pure Function
+def square(num):
+    return num * num
+
+square(4)   # 16
+square(4)   # 16
+
+Why is it pure?
+Same input → Same output.
+No dependency on external variables.
+
+
+Non-Pure Function  : Example
+count = 0
+
+def increment():
+    global count
+    count += 1
+    return count
+
+Why is it not pure?
+Uses a global variable.
+
+Same call can return different results.
+increment()  # 1
+increment()  # 2
+increment()  # 3
+
+
+This way, the original data remains unchanged, and the function has no side effects.
+
+Would you like me to show you a simple code example?
