@@ -15,13 +15,14 @@ There are three numeric types in Python:
 •	float
 •	complex
 
-Int
+INT
 Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
 x = 1
 y = 35656222554887711
 z = -3255522
 
-Float
+
+FLOAT
 Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
 Example
 x = 1.10
@@ -33,7 +34,7 @@ y = 12E4
 z = -87.7e100
 
 
-Complex
+COMPLEX NUMBER
 Complex numbers are written with a "j" as the imaginary part:
 x = 3+5j
 y = 5j
