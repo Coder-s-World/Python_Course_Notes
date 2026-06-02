@@ -74,8 +74,6 @@ Inheritance is a fundamental concept in object-oriented programming (OOP) that a
 Here, a parent class Animal is created that has a method info(). Then a child classes Dog is created that inherit from Animal and add their own behavior.
 
 
-
-
 class Animal:
     def __init__(self, name):
         self.name = name
@@ -88,6 +86,7 @@ class Dog(Animal):
         print(self.name, "barks")
 ​
 d = Dog("Buddy")
+
 # Inherited method
 d.info()     
 d.sound()
@@ -102,20 +101,19 @@ info() prints the name of the animal.
 class Dog(Animal) defines Dog as a child of Animal class.
 d.info() calls parent method info() and d.sound() calls child method.
 animal_class
+    
 Inheritance in Python
 Why do we need Inheritance
-Promotes code reusability by sharing attributes and methods across classes.
-Models real-world hierarchies like Animal -> Dog or Person -> Employee.
-Simplifies maintenance through centralized updates in parent classes.
-Enables method overriding for customized subclass behavior.
-Supports scalable, extensible design using polymorphism.
+     *   Promotes code reusability by sharing attributes and methods across classes.
+     *   Models real-world hierarchies like Animal -> Dog or Person -> Employee.
+     *   Simplifies maintenance through centralized updates in parent classes.
+     *   Enables method overriding for customized subclass behavior.
+     *   Supports scalable, extensible design using polymorphism.
+    
 super() Function
 super() function is used to call methods from a superclass following Python’s Method Resolution Order (MRO). In particular, it is commonly used in the child class's __init__() method to initialize inherited attributes. This way, the child class can leverage the functionality of the parent class.
 
 Example: Here, Dog uses super() to call Animal's constructor
-
-
-
 
 # Parent Class: Animal
 class Animal:
@@ -229,9 +227,6 @@ Class.mro()-> returns a list
 Class.__mro__ -> returns a tuple
 The below code demonstrates the use of super() with multiple inheritance: calling obj.m() executes the m methods following the Method Resolution Order (MRO), ensuring each parent method is called once. The mro() and __mro__ outputs show the search order: Class4 -> Class2 -> Class3 -> Class1 -> object.
 
-
-
-
 class Class1:
     def m(self):
         print("In Class1")
@@ -260,9 +255,6 @@ Output
 Example 1: When the method is overridden in both classes
 The code demonstrates multiple inheritance where Class4 inherits from Class2 and Class3; calling obj.m() executes Class2’s method because, according to Python’s MRO, Class2 is checked before Class3.
 
-
-
-
 class Class1:
     def m(self):
         print("In Class1") 
@@ -283,11 +275,9 @@ obj.m()
 
 Output
 In Class2
+
 Example 2: When the Method overridden in one class only
 The code shows multiple inheritance where Class4 inherits from Class2 and Class3; calling obj.m() executes Class3’s method due to Python’s method resolution order (MRO).
-
-
-
 
 class Class1:
     def m(self):
@@ -308,11 +298,9 @@ obj.m()
 
 Output
 In Class3
+
 Example 3: All classes define the same method
 The code demonstrates multiple inheritance, showing that Class4 overrides the m method, but methods from parent classes (Class2, Class3, Class1) can still be called explicitly using the class name.
-
-
-
 
 class Class1:
     def m(self):
@@ -341,11 +329,9 @@ In Class4
 In Class2
 In Class3
 In Class1
+
 Example 4: Calling methods of parent classes from child class
 The code demonstrates multiple inheritance and explicitly calls parent class methods, showing how Class1.m() is invoked multiple times through Class2 and Class3.
-
-
-
 
 class Class1:
     def m(self):
@@ -376,11 +362,9 @@ In Class2
 In Class1
 In Class3
 In Class1
+
 Super Function 
 Super Function in Python is used to call a method from a parent (base) class, especially in multiple inheritance. It helps avoid explicitly naming the parent class, ensures proper method resolution following the MRO, and prevents duplicate calls of the same method.
-
-
-
 
 class Class1:
     def m(self):
@@ -409,13 +393,14 @@ In Class4
 In Class2
 In Class3
 In Class1
-Explanation:
 
-Class4 inherits from Class2 and Class3, which both inherit from Class1, forming a diamond.
-Each class defines its own m() method.
-super() calls the next method in the Method Resolution Order (MRO).
-MRO for Class4 is Class4 -> Class2 -> Class3 -> Class1.
-Calling obj.m() executes the methods in MRO order.
+Explanation:
+  *  Class4 inherits from Class2 and Class3, which both inherit from Class1, forming a diamond.
+  *  Each class defines its own m() method.
+  *  super() calls the next method in the Method Resolution Order (MRO).
+  *  MRO for Class4 is Class4 -> Class2 -> Class3 -> Class1.
+  *  Calling obj.m() executes the methods in MRO order.
+
 3. Multilevel Inheritance
 
 A class inherits from a class that is already inherited from another class.
@@ -427,6 +412,7 @@ Grandparent
       │
       ▼
     Child
+
 Example
 class Grandparent:
     pass
@@ -436,6 +422,7 @@ class Parent(Grandparent):
 
 class Child(Parent):
     pass
+    
 4. Hierarchical Inheritance
 
 Multiple child classes inherit from the same parent class.
@@ -497,10 +484,121 @@ Summary Table
 
 
 Abstraction
-Abstraction can be seen both as a means for hiding important information as well as unnecessary information in a block of code. The core of abstraction in Python is the implementation of something called abstract classes and methods, which can be implemented by inheriting from something called the abc module. "abc" here stands for abstract base class. It is first imported and then used as a parent class for some class that becomes an abstract class. Its simplest implementation can be done as below.
+Abstraction can be seen both as a means for hiding important information as well as unnecessary information in a block of code. The core of abstraction in Python is the implementation of something called abstract classes and methods, which can be implemented by inheriting from something called the abc module. abc here stands for abstract base class. It is first imported and then used as a parent class for some class that becomes an abstract class. Its simplest implementation can be done as below.
 
 from abc import ABC,   
 class ClassName(ABC):
     pass
 
+Data abstraction means showing only the essential features and hiding the complex internal details. It is used to hide the implementation details from the user and expose only necessary parts, making the code simpler and easier to interact with.
+
+data_abstraction
+Data Abstraction in Python
+Real Life Example: In a graphics software, multiple shapes are available such as Circle, Rectangle and Triangle. All shapes share common data and support the same set of actions, but the internal details are hidden:
+
+Common data: name, color, border thickness, fill style.
+Common actions: draw(), resize(), getArea().
+Each shape implements these actions differently Circle uses radius, Rectangle uses length and width and Triangle uses base and height.
+The software only knows that a shape can be drawn and its area can be calculated. How the shape is drawn or how the area is calculated is hidden.
+
+Abstract Base Class
+Abstract Base Class (ABC) is used to achieve data abstraction by defining a common interface for its subclasses. It cannot be instantiated directly and serves as a blueprint for other classes.
+
+Abstract classes are created using abc module and @abstractmethod decorator, allowing developers to enforce method implementation in subclasses while hiding complex internal logic.
+
+from abc import ABC, abstractmethod
+​
+class Greet(ABC):
+    @abstractmethod
+    def say_hello(self):
+        pass  # Abstract method
+​
+class English(Greet):
+    def say_hello(self):
+        return Hello!
+​
+    
+g = English()
+print(g.say_hello())
+
+Output
+Hello!
+
+Explanation:
+
+Greet is an abstract class with a method say_hello() that has no implementation.
+English implements this method and returns a greeting.
+This keeps structure fixed while letting subclasses define their own behavior.
+
+Components of Abstraction
+Abstraction is made up of key components, these elements work together to define a clear and enforced structure for subclasses while hiding unnecessary implementation details. Let's discuss them one by one.
+
+1. Abstract Method
+   Abstract methods are method declarations without a body defined inside an abstract class. They act as placeholders that force subclasses to provide their      own specific implementation, ensuring consistent structure across derived classes.
+
+from abc import ABC, abstractmethod
+     
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass  # Abstract method, no implementation here
+        
+Explanation: make_sound() is an abstract method in Animal class, so it doesn't have any code inside it.
+
+2. Concrete Method
+   Concrete methods are fully implemented methods within an abstract class. Subclasses can inherit and use them directly, promoting code reuse without needing    to redefine common functionality.
+
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass  # Abstract method, to be implemented by subclasses
+​
+    def move(self):
+        return "Moving"  # Concrete method with implementation
+Explanation: move() method is a concrete method in Animal class. It is implemented and does not need to be overridden by Dog class.
+
+3. Abstract Properties
+   Abstract properties work like abstract methods but are used for properties. These properties are declared with @property decorator and marked as abstract      using @abstractmethod. Subclasses must implement these properties.
+
+from abc import ABC, abstractmethod
+​
+class Animal(ABC):
+    @property
+    @abstractmethod
+    def species(self):
+        pass  # Abstract property, must be implemented by subclasses
+​
+class Dog(Animal):
+    @property
+    def species(self):
+        return Canine
+​
+# Instantiate the concrete subclass
+dog = Dog()
+print(dog.species)
+
+Output
+Canine
+
+Explanation:
+    species is an abstract property in Animal class and it is marked as @abstractmethod.
+    Dog class implements species property, making it a concrete subclass that can be instantiated.
+    Abstract properties enforce that a subclass provides property’s implementation.
+
+4. Abstract Class Instantiation
+   Abstract classes cannot be instantiated directly. This is because they contain one or more abstract methods or properties that lack implementations.           Attempting to instantiate an abstract class results in a TypeError.
+
+from abc import ABC, abstractmethod
+​
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+​
+animal = Animal()
+
+Explanation:
+    Animal class is abstract because it has make_sound() method as an abstract method.
+    Instantiating Animal() raises a TypeError because abstract classes with unimplemented methods can't be instantiated, only fully implemented subclasses can.
 
