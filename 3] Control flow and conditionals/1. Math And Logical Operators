@@ -33,14 +33,21 @@ The assignment operator is used to assigning values to the variable in many diff
 
 Used to assign values.
 
-| Operator | Meaning             | Example                |
-| -------- | ------------------- | ---------------------- |
-| `=`      | Assign value        | `x = 10`               |
-| `+=`     | Add and assign      | `x += 5` → `x = x + 5` |
-| `-=`     | Subtract and assign | `x -= 3` → `x = x - 3` |
-| `*=`     | Multiply and assign | `x *= 2` → `x = x * 2` |
-| `/=`     | Divide and assign   | `x /= 4` → `x = x / 4` |
-
+| Operator | Meaning                 | Example                  |                    
+| -------- | ----------------------- | ------------------------ | 
+| `=`      | Assign value            | `x = 10`                 |                      
+| `+=`     | Add and assign          | `x += 5` → `x = x + 5`   |                      
+| `-=`     | Subtract and assign     | `x -= 3` → `x = x - 3`   |                      
+| `*=`     | Multiply and assign     | `x *= 2` → `x = x * 2`   |                      
+| `/=`     | Divide and assign       | `x /= 4` → `x = x / 4`   |                      
+| `%=`     | Modulus and assign      | `x %= 3` → `x = x % 3`   |                      
+| `**=`    | Exponent and assign     | `x **= 2` → `x = x ** 2` |                      
+| `//=`    | Floor divide and assign | `x //= 2` → `x = x // 2` |                      
+| `&=`     | Bitwise AND and assign  | `x &= 3` → `x = x & 3`   |                      
+| `OR=`    | Bitwise OR and assig    | `x | = 3`→`x = x | 3`    |
+| `^=`     | Bitwise XOR and assign  | `x ^= 3` → `x = x ^ 3`   |                      
+| `>>=`    | Right shift and assign  | `x >>= 1` → `x = x >> 1` |                      
+| `<<=`    | Left shift and assign   | `x <<= 1` → `x = x << 1` |                 
 
 4. Logical Operators
 The logical operator is used to perform some logical operations or combine conditional statements. Mainly logical operators are used in control statements like if, else, and elif where we can check more conditions together just by using these operators. Logical operators always return TRUE or FALSE values.
@@ -66,8 +73,8 @@ These two values represent:
 OFF / ON
 FALSE / TRUE
 NO / YES
-Example
 
+Example
 Binary number:
 1010
 Here each digit (1 or 0) is called a bit.
@@ -82,7 +89,7 @@ Example:
 | Operator | Meaning     | Example                                                   |
 | -------- | ----------- | --------------------------------------------------------- |
 | `&`      | AND         | `5 & 3 = 1` *(101 & 011 = 001)*                           |
-| `\|`     | OR          | `5 \| 3 = 7` *(101 | 011 = 111)*                          |
+| `|`      | OR          | `5 \| 3 = 7` *(101 | 011 = 111)*                          |
 | `^`      | XOR         | `5 ^ 3 = 6` *(101 ^ 011 = 110 → different bits become 1)* |
 | `~`      | NOT         | `~5 = -6` *(reverses all bits of 5)*                      |
 | `<<`     | Left Shift  | `5 << 1 = 10` *(101 → 1010, shifts bits left by 1 place)* |
@@ -99,6 +106,7 @@ EXAMPLE = 10
 | 4    | 1 ÷ 2         | 0        | 1         |
 
 B.Write both binary numbers properly.
+
 C.Apply the operator rule bit by bit.
 
 | Operator | Name        | Rule                                | Else Condition                      | Example            |    |        |
@@ -120,7 +128,7 @@ E.Convert the binary result back to decimal.
 | 2⁰         | 1      |                                 
                              
 6. Membership Operators
-Membership operatorsin python  are used for checking if the iterator or the given value is present in the sequence or not. These types of operators always return values in a TRUE or FALSE format. If the value is found in the sequence then the operator will return TRUE else the operator will return FALSE.
+Membership operators in python  are used for checking if the iterator or the given value is present in the sequence or not. These types of operators always return values in a TRUE or FALSE format. If the value is found in the sequence then the operator will return TRUE else the operator will return FALSE.
 
 Used to check membership.
 
