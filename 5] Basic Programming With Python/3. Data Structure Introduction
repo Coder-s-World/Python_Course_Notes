@@ -4,13 +4,13 @@ Data structures are designed for this very purpose.-----------------------------
 
 Data Structures in Python
 │
-├── Built-in Data Structures
+├── Built-in Data Structures (LDTS)
 │   ├── List
 │   ├── Dictionary
 │   ├── Tuple
 │   └── Set
 │
-└── User-Defined Data Structures
+└── User-Defined Data Structures (SQTLGH)
     ├── Stack
     ├── Queue
     ├── Tree
@@ -26,3 +26,50 @@ Each data structure can be designed to solve a particular problem or optimize a 
 
 Mutability and Immutability-----------------------
 Data Structures can be mutable or immutable. The next question you may ask is, what is mutability? Mutability refers to data inside the data structure that can be modified. For example, you can either change, update, or delete the data when needed. A list is an example of a mutable data structure. The opposite of mutable is immutable. An immutable data structure will not allow modification once the data has been set. The tuple is an example of an immutable data structure.
+
+Mutable
+├── List
+├── Dictionary
+├── Set
+└── Bytearray
+
+Immutable
+├── Numbers (int, float, complex)
+├── Boolean (bool)
+├── String (str)
+├── Tuple
+├── Frozenset
+├── Bytes
+└── None
+_____________________________________________________________________________________________
+
+User-Defined Data Structures
+│
+├── Mutable (Default)
+│   ├── Class Objects
+│   ├── Linked List
+│   ├── Stack
+│   ├── Queue
+│   ├── Tree
+│   ├── Graph
+│   └── Custom Collections
+│
+└── Immutable (Only if explicitly designed)
+    ├── Read-only Classes
+    ├── Frozen Dataclasses
+    └── Custom Immutable Objects
+
+Why?
+
+When you create an object from a class, you can normally change its attributes:
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+s = Student("John")
+s.name = "Mike"    # Allowed
+
+Since the object's state can be changed, it is mutable.
+
+User-defined data structures in Python are generally mutable by default. They become immutable only when the programmer explicitly restricts modifications (e.g., using frozen dataclasses or read-only designs).
