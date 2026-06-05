@@ -1,38 +1,43 @@
 Loop control statements are the statements which controls the execution of loops. Types of loop control statements are 
 
-break
-  used to terminate the loop 
-continue
-  used to escape from the present iteration
-pass
-  pass doesn’t effect the code but it is used when you need to statement but not to execute that
+1.Break
+   * used to terminate the loop 
+2.Continue
+   * used to escape from the present iteration
+3.Pass
+   * pass doesn’t effect the code but it is used when you need to statement but not to execute that
 
 Loops in Python performs tasks in an efficient manner. But sometimes, there may be some condition where you want to end the execution completely or skip an iteration or ignore that condition. These can be done by loop control statements. Loop control statements are break , continue and pass.
+------------------------------------------------------------------------------------
+
+continue :
 
 It is a loop control statemet.
 It forces the loop to execute the next iteration of the loop.
-When this statement is used inside the loop , the code icluding the continue statement will be skipped and the next iteration will begin. 
+When this statement is used inside the loop , the code including the continue statement will be skipped and the next iteration will begin. 
 The continue statement in Python returns the control to the beginning of the loop.
 
 Syntax of Continue: 
-Loop from 1 to n :
 
 if (condition ): #True
   Continue 
 else :  
   remaining body of the loop  
 
-#continue statement 
-#it will be print the odd numbers from 1 to 10 
+# Continue statement 
+# It will be print the odd numbers from 1 to 10 
 for i in range(1,11):
-    if(i%2==0): #when i%2==0 it will move to next iteration
+    if(i % 2 == 0): # when i % 2 == 0 it will move to next iteration
         continue
     else:
         print(i,end=' ')
 Output:
 1 3 5 7 9
 
-Break Statement in Python:
+------------------------------------------------------------
+
+Break :
+
 It is a loop control statement.
 Break statement is used to terminate the loop , if a specific condition arises.
 If a break statement is present in the nested loop, then it terminates the loop which contains break statement. 
@@ -41,24 +46,25 @@ The most common use for break is when some external condition is triggered which
 Syntax of Break : 
 Loop from 1 to n
 
-if( condition ) : #true
+if( condition ) : # true
   break (if condition is true loop terminates )
 else :
   remaining body of the loop
 
-#break statement 
-#loop will terminate if a number will divisble by 2 and 3 both
+# Break statement 
+# loop will terminate if a number will divisble by 2 and 3 both
 for i in range(1,11):
-    if(i%2==0 and i%3==0):
+    if(i % 2 == 0 and i % 3 == 0):
         print('')
         print("Break's here at", i)
         break
     else:
-        print(i,end=' ')
+        print(i, end=' ')
 Output:
 1 2 3 4 5
 Break's here at 6
 
+------------------------------------------
 Pass Statement in Python
 In python , Pass statement is a null statement. Interpreter does not ignores pass statement eventually it does not do anything about pass statement.
 
@@ -69,14 +75,14 @@ def hello( ) :
 class hello :
     pass
 
-Code #2:
+Code # 2:
 Pass statement in loop and decision making.
-Run
-#Pass statement 
-#we can use pass statement for an condition to skip
- b=10 
+# Pass statement 
+# we can use pass statement for an condition to skip
+
+b=10 
 for i in range(5,12):
-    if(i==b):
+    if(i == b):
         pass 
     else:
         print('Not passed for ', i)
