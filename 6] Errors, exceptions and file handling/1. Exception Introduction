@@ -7,44 +7,47 @@ In Python programming, an exception is a special kind of error that happens whil
 
 If exceptions are not properly handled in a program, the following can happen:
 
-The program may abruptly terminate or crash, causing a poor user experience.
-Important processes or data operations might be interrupted, leading to data loss or corruption.
-The program may expose technical error messages to users, which can be confusing or reveal sensitive information.
-It becomes harder to debug and maintain the code because unhandled exceptions provide less control over error reporting.
-Proper exception handling ensures the program can respond gracefully to unexpected issues and continue running or shut down safely.
+  *  The program may abruptly terminate or crash, causing a poor user experience.
+  *  Important processes or data operations might be interrupted, leading to data loss or corruption.
+  *  The program may expose technical error messages to users, which can be confusing or reveal sensitive information.
+  *  It becomes harder to debug and maintain the code because unhandled exceptions provide less control over error reporting.
+  *  Proper exception handling ensures the program can respond gracefully to unexpected issues and continue running or shut down safely.
 
 Python Exception Handling allows a program to gracefully handle unexpected events (like invalid input or missing files) without crashing. Instead of terminating abruptly, Python lets you detect the problem, respond to it, and continue execution when possible.
 
+-----------------------------------------------------------------------
 In Python, you can handle exceptions using the try-except block to prevent program crashes. Here's how it works:
 
-try block: Place the code that might cause an exception inside this block.
-except block: Define how to handle specific exceptions if they occur
+  * try block: Place the code that might cause an exception inside this block.
+  * except block: Define how to handle specific exceptions if they occur
 
-try:
-    result = 10 / 0  # This will raise ZeroDivisionError
-except ZeroDivisionError:
-    print("Cannot divide by zero. Please check your input.")
+    try:
+        result = 10 / 0  # This will raise ZeroDivisionError
+    except ZeroDivisionError:
+        print("Cannot divide by zero. Please check your input.")
 
 This way, instead of crashing, the program catches the error and responds gracefully.
 
+------------------------------------------------
 Difference Between Errors and Exceptions
 
 Errors and exceptions are both issues in a program, but they differ in severity and handling.
 
-Error: Issues in the program logic such as SyntaxError, etc. It occurs at compile time.
-Exception: Problems that occur at runtime and can be managed using exception handling (e.g., invalid input, missing files).
+    =>     Error : Issues in the program logic such as SyntaxError, etc. It occurs at compile time.
+    =>     Exception : Problems that occur at runtime and can be managed using exception handling (e.g., invalid input, missing files).
 
+--------------------------------------------------
 Syntax of Exception Handling
 Python provides four main keywords for handling exceptions: try, except, else and finally each plays a unique role. Let's see syntax:
 
-try:
-      # Code 
-except SomeException:
-      # Code 
-else:
-     # Code 
-finally:
-    # Code 
+        try:
+              # Code 
+        except SomeException:
+              # Code 
+        else:
+             # Code 
+        finally:
+            # Code 
 
 try:
     number = int(input("Enter a number: "))
